@@ -15,6 +15,7 @@ class Home extends Component {
                         <Link className={styles.hero_button} to="/productos">comprar</Link>
                     </div>
                 </section>
+                
                 <BestSellers />
             </>
         );

@@ -1,37 +1,37 @@
-// import coffee from "../../assets/images/coffee.png"
+import coffee from "../assets/images/products/coffee.png"
 
 export const products = [
         {
             id: 1,
-            name: "Cafe",
+            name: "Café",
             price: 100,
             category: "café",
             isBestSeller: true,
             image:{
-                url:"coffee.png",
+                url: coffee,
                 alt:"asdasd"
             }
         },
         {
             id: 2,
-            name: "Cafe con leche",
+            name: "Café con leche",
             price: 150,
             category: "café",
             isBestSeller: true,
             image:{
-                url:"adasd",
-                alt:"asdasd"
+                url: coffee,
+                alt:"café con leche"
             }
         },
         {
             id: 3,
-            name: "Cafe con crema",
+            name: "Café con crema",
             price: 200,
             category: "café",
             isBestSeller: true,
             image:{
-                url:"adasd",
-                alt:"asdasd"
+                url: coffee,
+                alt:"café con crema"
             }
         },
         {
@@ -41,7 +41,7 @@ export const products = [
             category: "café",
             image:{
                 url:"adasd",
-                alt:"asdasd"
+                alt:"café con leche y crema"
             }
         },
         {
