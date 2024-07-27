@@ -21,16 +21,20 @@
 
 .product_info_slide {
     height: 120px;
-    transform: translateY(-120px);
     padding: 24px;
     transition: 0.4s ease-in-out;
     opacity: 0;
     background-color: white;
+    transform: translateY(-120px);
 }
 
 .product_card:hover .product_info_slide {
-    transform: translateY(0);
     opacity: 1;
+    transition: 0.6s ease-in-out;
+}
+
+.product_card:hover .product_info {
+    transform: translateY(-120px);
     transition: 0.4s ease-in-out;
 }
 

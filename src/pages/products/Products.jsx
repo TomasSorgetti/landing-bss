@@ -19,19 +19,16 @@ class Products extends Component {
             loading: true
         })
         try {
-            getAllCategories().then((categories) => {
+            const getData = async () => {
+                const categoryList = await getAllCategories()
+                const productsList = await getAllProducts()
                 this.setState({
-                    categories: categories
+                    products: productsList,
+                    categories: categoryList,
+                    loading: false,
                 })
-            }).then(() => {
-                getAllProducts()
-                    .then((products) => {
-                        this.setState({
-                            products: products,
-                            loading: false,
-                        });
-                    })
-            })
+            }
+            getData()
         } catch (error) {
             console.log(error);
             this.setState({
@@ -40,18 +37,21 @@ class Products extends Component {
         }
     }
 
-    handleClick = (category) => {
+    searchProductsByCategory = (category) => {
         this.setState({
             loading: true
         })
         try {
-            getProductsByCategory(category)
-                .then((products) => {
-                    this.setState({
-                        products: products,
-                        loading: false,
-                    });
-                })
+            const getData = async () => {
+                await getProductsByCategory(category)
+                    .then((products) => {
+                        this.setState({
+                            products: products,
+                            loading: false,
+                        });
+                    })
+            }
+            getData()
         } catch (error) {
             console.log(error);
             this.setState({
@@ -67,9 +67,9 @@ class Products extends Component {
                 <aside className={styles.sidebar}>
                     <h2>Categorías</h2>
                     <ul className={styles.categories_cont}>
-                        <li onClick={() => this.handleClick(0)}>Todos</li>
+                        <li onClick={() => this.searchProductsByCategory(0)}>Todos</li>
                         {this.state.categories?.map(({ id, name }) => (
-                            <li onClick={() => this.handleClick(id)} key={id}>{name}</li>
+                            <li onClick={() => this.searchProductsByCategory(id)} key={id}>{name}</li>
                         ))}
                     </ul>
                 </aside>
