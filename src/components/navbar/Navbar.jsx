@@ -4,7 +4,7 @@ import styles from "./Navbar.module.css"
 const Navbar = () => {
     return (
         <nav className={styles.navbar}>
-            <Link className={styles.logo} to="/">Moka Coffee</Link>
+            <Link className={styles.logo} to="/">Moka <span>Coffee</span></Link>
             <div className={styles.nav_links_container}>
                 <NavLink to="/" className={({ isActive }) => isActive ? styles.active_option : ""}>Inicio</NavLink>
                 <NavLink to="/productos" className={({ isActive }) => isActive ? styles.active_option : ""}>Productos</NavLink>
