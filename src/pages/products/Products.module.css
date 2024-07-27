@@ -1,0 +1,25 @@
+.sidebar {
+    width: 360px;
+    background-color: #140F0B;
+    color: white;
+    padding: 40px;
+    position: fixed;
+    left: 0;
+    top: 240px;
+}
+
+.products_cont {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 60px;
+    margin: 60px 0 120px 0;
+    list-style: none;
+    width: 100%;
+    max-width: 1440px;
+    margin: 80px auto;
+}
+
+.categories_cont {
+    margin-top: 120px;
+}

@@ -25,6 +25,7 @@
     padding: 24px;
     transition: 0.4s ease-in-out;
     opacity: 0;
+    background-color: white;
 }
 
 .product_card:hover .product_info_slide {

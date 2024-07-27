@@ -5,7 +5,7 @@ export const getAllProducts = () => {
     return new Promise ((resolve)=> {
         setTimeout(() => {
             resolve(products)
-        }, 400);
+        }, 600);
     })
 }
 export const getBestSellersProducts = (limit) => {
@@ -21,14 +21,17 @@ export const getBestSellersProducts = (limit) => {
                     products.filter((prod) => prod.isBestSeller).slice(0, limit)
                 )
             }
-        }, 400);
+        }, 600);
     })
 }
 
 export const getProductsByCategory= (productCategory) => {
     return new Promise((resolve) => {
+        if(!productCategory) {
+            resolve(products)
+        }
         setTimeout(()=>{
-            resolve(products.filter((prod) => prod.category === productCategory))
-        }, 400);
+            resolve(products.filter((prod) => prod.category.includes(productCategory)))
+        }, 600);
     })
 }
