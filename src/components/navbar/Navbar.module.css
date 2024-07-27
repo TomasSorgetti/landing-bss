@@ -34,6 +34,13 @@
     font-weight: 700;
 }
 
+.navbar .contact_button:hover {
+    background-color: #e09b6a;
+    transition: 0.6s ease;
+}
+.navbar .contact_button:focus{
+    background-color: #d96a1a;
+}
 .active_option {
     font-weight: 700;
 }
