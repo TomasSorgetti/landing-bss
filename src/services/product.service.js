@@ -1,4 +1,4 @@
-import { products, bestSellersProducts } from "./product.mock";
+import { products } from "./product.mock";
 
 
 export const getAllProducts = () => {
@@ -8,10 +8,19 @@ export const getAllProducts = () => {
         }, 400);
     })
 }
-export const getBestSellersProducts = () => {
+export const getBestSellersProducts = (limit) => {
     return new Promise ((resolve)=> {
         setTimeout(() => {
-            resolve(bestSellersProducts)
+            if (!limit) {
+                resolve(                
+                    products.filter((prod) => prod.isBestSeller)
+                )
+            }
+            else {                
+                resolve(                
+                    products.filter((prod) => prod.isBestSeller).slice(0, limit)
+                )
+            }
         }, 400);
     })
 }
@@ -20,6 +29,6 @@ export const getProductsByCategory= (productCategory) => {
     return new Promise((resolve) => {
         setTimeout(()=>{
             resolve(products.filter((prod) => prod.category === productCategory))
-        }, 500);
+        }, 400);
     })
 }

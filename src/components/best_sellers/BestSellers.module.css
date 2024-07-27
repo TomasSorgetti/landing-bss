@@ -1,0 +1,23 @@
+.best_sellers_cont {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+    padding: 0 120px;
+}
+
+.best_sellers_cont h2 {
+    font-size: 3rem;
+    color: #140F0B;
+    margin: 120px 0;
+}
+
+.best_sellers_cont ul {
+    display: flex;
+    justify-content: center;
+    gap: 60px;
+    margin-top: 40px;
+    list-style: none;
+    margin-bottom: 80px;
+}
