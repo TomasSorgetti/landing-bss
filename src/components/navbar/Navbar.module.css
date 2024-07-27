@@ -37,3 +37,35 @@
 .active_option {
     font-weight: 700;
 }
+
+
+@media screen and (max-width: 1680px) {
+    .navbar {
+        padding: 16px 160px;
+    }
+}
+
+@media screen and (max-width: 1440px) {
+    .navbar {
+        padding: 16px 120px;
+    }
+}
+
+@media screen and (max-width: 1280px) {}
+
+@media screen and (max-width: 1024px) {
+    .navbar {
+        padding: 16px 80px;
+    }
+
+    .nav_links_container {
+        display: none;
+    }
+
+}
+
+@media screen and (max-width: 768px) {}
+
+@media screen and (max-width: 640px) {}
+
+@media screen and (max-width: 360px) {}

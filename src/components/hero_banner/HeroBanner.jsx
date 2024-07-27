@@ -1,5 +1,6 @@
 import { Link } from "react-router-dom"
 import styles from "./HeroBanner.module.css"
+
 const HeroBanner = () => {
     return (
         <section className={styles.hero_banner_cont}>
