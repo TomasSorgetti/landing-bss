@@ -3,6 +3,20 @@
     height: 360px;
     background-color: bisque;
     position: relative;
+    cursor: pointer;
+}
+
+.product_card:hover {
+    transition: 0.4s ease-in-out;
+    transform: translateY(-8px);
+    box-shadow: -8px 8px 40px -10px rgba(20, 15, 11, 0.53);
+    -webkit-box-shadow: -8px 8px 40px -10px rgba(20, 15, 11, 0.53);
+    -moz-box-shadow: -8px 8px 40px -10px rgba(20, 15, 11, 0.53);
+}
+
+.product_card:hover img {
+    filter: brightness(0.6);
+    transition: 0.4s ease-in-out;
 }
 
 .best_seller {
@@ -21,4 +35,13 @@
     left: 0;
     color: white;
     padding: 24px;
+}
+
+.product_info h3 {
+    font-size: 1.5rem;
+    margin-bottom: 8px;
+}
+
+.product_info p {
+    font-size: 1.2rem;
 }

@@ -1,11 +1,20 @@
 import { Component } from 'react';
-import HeroBanner from "../../components/hero_banner/HeroBanner";
+import styles from "./Home.module.css"
 import BestSellers from "../../components/best_sellers/BestSellers"
+import { Link } from 'react-router-dom';
+
+
 class Home extends Component {
     render() {
         return (
             <>
-                <HeroBanner />
+                <section className={styles.hero_banner_cont}>
+                    <div>
+                        <span className={styles.hero_text_span}>CAFÉ Y PASTELERÍA</span>
+                        <h1><span className={styles.hero_title_span}>Moka Coffe</span>, un rincón de <br /> tranquilidad y sabor en <br /> cada taza</h1>
+                        <Link className={styles.hero_button} to="/productos">comprar</Link>
+                    </div>
+                </section>
                 <BestSellers />
             </>
         );
