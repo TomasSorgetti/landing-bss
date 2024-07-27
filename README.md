@@ -24,3 +24,35 @@ Sube tu proyecto a un repositorio público en GitHub.
 Asegúrate de incluir un archivo README.md con instrucciones claras sobre cómo ejecutar el proyecto.
 Una vez completado, envíanos el enlace a tu repositorio para que podamos revisar tu trabajo.
 Queremos que esta prueba técnica sea una experiencia enriquecedora para ti. No solo nos ayudará a evaluar tus habilidades, sino que también te permitirá mostrar tu creatividad y dominio de React.js. ¡Buena suerte y esperamos ver tu talento reflejado en el proyecto!  
+
+app/
+├── public/                    
+├── src/                       
+│   ├── assets/                
+│   │   ├── design/                         # Imágenes del diseño
+│   │   ├── fonts/                          # Carpeta con las fonts
+│   │   └── images/                         # Carpeta que contiene todas las imágenes
+│   │   
+│   ├── components/                         # Carpeta que contiene todos los componentes
+│   │   ├── button/                             => Function Component
+│   │   ├── footer/                             => Function Component
+│   │   └── navbar/                             => Class Component
+│   │   
+│   ├── pages/                              # Carpeta que contiene todas las páginas
+│   │   ├── contact/                            => Class Component
+│   │   ├── home/                               => Function Component
+│   │   └── products/                           => Class Component
+│   │   
+│   ├── services/                           # Carpeta para simular los llamados a la api
+│   │   └── product.mock.js                 # Mock de los productos
+│   │   └── product.service.js              # Funciones para llamado a la api
+│   │   
+│   ├── utils/                 
+│   │   └── formatDate.js
+│   │   
+│   ├── App.jsx                                 => Function Component                        
+│   └── main.jsx                                => Function Component
+│                               
+├── index.html                
+├── config files                
+└── README.md   
