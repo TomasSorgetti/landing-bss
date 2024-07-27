@@ -19,6 +19,32 @@
     transition: 0.4s ease-in-out;
 }
 
+.product_info_slide {
+    height: 120px;
+    transform: translateY(-120px);
+    padding: 24px;
+    transition: 0.4s ease-in-out;
+    opacity: 0;
+}
+
+.product_card:hover .product_info_slide {
+    transform: translateY(0);
+    opacity: 1;
+    transition: 0.4s ease-in-out;
+}
+
+.product_info_slide button {
+    background-color: #E68541;
+    color: #140F0B;
+    padding: 12px 18px;
+    border: none;
+    border-radius: 8px;
+    font-size: 1.3rem;
+    margin-top: 12px;
+    cursor: pointer;
+}
+
+
 .best_seller {
     position: absolute;
     top: 0;

@@ -7,7 +7,7 @@ import { Link } from 'react-router-dom';
 class Home extends Component {
     render() {
         return (
-            <>
+            <main>
                 <section className={styles.hero_banner_cont}>
                     <div>
                         <span className={styles.hero_text_span}>CAFÉ Y PASTELERÍA</span>
@@ -15,9 +15,8 @@ class Home extends Component {
                         <Link className={styles.hero_button} to="/productos">comprar</Link>
                     </div>
                 </section>
-                
                 <BestSellers />
-            </>
+            </main>
         );
     }
 }

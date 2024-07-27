@@ -35,13 +35,14 @@ class BestSellers extends Component {
                 <h2>Más vendidos</h2>
                 <ul>
                     {this.state.loading && <li>Cargando...</li>}
-                    {this.state.products?.map(({ id, name, price, isBestSeller, image }) => (
+                    {this.state.products?.map(({ id, name, price, description, isBestSeller, image }) => (
                         <ProductCard
                             key={id}
                             name={name}
                             price={price}
                             isBestSeller={isBestSeller}
                             image={image}
+                            description={description}
                         />
                     ))}
                 </ul>

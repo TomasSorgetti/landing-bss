@@ -5,6 +5,7 @@ export const products = [
             id: 1,
             name: "Café",
             price: 100,
+            description:"descripcion de prueba",
             category: "café",
             isBestSeller: true,
             image:{
@@ -16,6 +17,7 @@ export const products = [
             id: 2,
             name: "Café con leche",
             price: 150,
+            description:"descripcion de prueba",
             category: "café",
             isBestSeller: true,
             image:{
@@ -27,6 +29,7 @@ export const products = [
             id: 3,
             name: "Café con crema",
             price: 200,
+            description:"descripcion de prueba",
             category: "café",
             isBestSeller: true,
             image:{
@@ -38,6 +41,7 @@ export const products = [
             id: 4,
             name: "Cafe con leche y crema",
             price: 250,
+            description:"descripcion de prueba",
             category: "café",
             image:{
                 url:"adasd",
@@ -48,6 +52,7 @@ export const products = [
             id: 5,
             name: "Cafe descafeinado",
             price: 250,
+            description:"descripcion de prueba",
             category: "café",
             image:{
                 url:"adasd",
@@ -58,6 +63,7 @@ export const products = [
             id: 6,
             name: "Cafe espresso",
             price: 250,
+            description:"descripcion de prueba",
             category: "café",
             image:{
                 url:"adasd",
