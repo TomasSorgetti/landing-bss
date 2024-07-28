@@ -8,6 +8,16 @@ export const getAllProducts = () => {
         }, 600);
     })
 }
+
+export const getProductById = (id) => { 
+    return new Promise ((resolve)=> {
+        setTimeout(() => {
+            const product = products.filter((prod) => prod.id === id)[0]
+            resolve(product)
+        }, 600);
+    })
+}
+
 export const getBestSellersProducts = (limit) => {
     return new Promise ((resolve)=> {
         setTimeout(() => {

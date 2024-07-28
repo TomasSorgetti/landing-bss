@@ -1,6 +1,7 @@
 import styles from "./ProductCard.module.css"
 import { cartContext } from "../../context/cart/CartContext"
 import { useContext } from "react"
+import { Link } from "react-router-dom"
 const ProductCard = ({ id, name, price, description, isBestSeller, image }) => {
 
     const { addToCart, handleOpenCart } = useContext(cartContext)
@@ -20,7 +21,10 @@ const ProductCard = ({ id, name, price, description, isBestSeller, image }) => {
             </div>
             <div className={styles.product_info_slide}>
                 <p>{description}</p>
-                <button onClick={handleClick} className={`${styles.buy_button} buy`}>Comprar</button>
+                <div>
+                    <Link className={styles.ver_button} to={`/productos/${id}`}>Ver</Link>
+                    <button onClick={handleClick} className={`${styles.buy_button} buy`}>Comprar</button>
+                </div>
             </div>
             {isBestSeller && <span className={styles.best_seller}>más vendido</span>}
         </li>
