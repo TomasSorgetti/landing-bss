@@ -3,14 +3,30 @@ import { useContext, useEffect, useRef, useState } from "react"
 import { products } from "../../services/products/product.mock"
 import { cartContext } from "../../context/cart/CartContext"
 import CartItem from "../cart_item/CartItem"
+import { userContext } from "../../context/user/UserContext"
+import { useNavigate } from "react-router-dom"
+
 
 
 const Cart = () => {
+    const navigate = useNavigate()
     const cartRef = useRef(null);
     const { items, getTotalCartAmount, isVisible, handleCloseCart, emptyCart } = useContext(cartContext)
+    const { isLogin } = useContext(userContext)
     const totalAmount = getTotalCartAmount()
 
-
+    const handleBuy = () => {
+        if (isLogin) {
+            emptyCart()
+            handleCloseCart(
+            )
+            alert('Debería de dirigir al checkout page')
+        }
+        if (!isLogin) {
+            navigate('/login')
+            handleCloseCart()
+        }
+    }
     //* Esta funcion y useEffect es para poder cerrar el carrito clickeando fuera
     const handleClickOutside = (event) => {
         const condition = cartRef.current && !cartRef.current.contains(event.target) && !event.target.classList.contains('buy')
@@ -46,7 +62,7 @@ const Cart = () => {
                         <span>Total: ${totalAmount}</span>
                         <div>
                             <button onClick={emptyCart} className={styles.clear_button}>Vaciar</button>
-                            <button className={styles.buy_button}>Comprar</button>
+                            <button onClick={handleBuy} className={styles.buy_button}>Comprar</button>
                         </div>
                     </div>
                     : <span>Carrito vacío</span>}
@@ -54,5 +70,7 @@ const Cart = () => {
         </div>
     )
 }
+
+
 
 export default Cart
