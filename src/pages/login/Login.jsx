@@ -20,27 +20,30 @@ const Login = () => {
             ...form,
             [name]: value
         })
+        setError("")
     }
 
     const handleSubmit = async (e) => {
         e.preventDefault()
-        setLoading(true)
-        try {
-            const response = await signIn(form.email, form.password)
-            if (response.error) {
-                throw new Error(response.message)
-            }
+        if (form.email && form.password) {
+            setLoading(true)
+            try {
+                const response = await signIn(form.email, form.password)
+                if (response.error) {
+                    throw new Error(response.message)
+                }
 
-            setLoading(false)
-            LoginUser()
-            setForm({
-                email: "",
-                password: ""
-            })
-            navigate("/")
-        } catch (error) {
-            setError(error.message)
-            setLoading(false)
+                setLoading(false)
+                LoginUser()
+                setForm({
+                    email: "",
+                    password: ""
+                })
+                navigate("/")
+            } catch (error) {
+                setError(error.message)
+                setLoading(false)
+            }
         }
     }
 

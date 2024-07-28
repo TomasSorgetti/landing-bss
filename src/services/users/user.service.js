@@ -6,7 +6,7 @@ export const signIn = (email, password) => {
     if (!email || !password) {
         return new Promise((resolve) => {
             setTimeout(() => {
-                resolve({ error: true, status: 400, message: "All fields are required" })
+                resolve({ error: true, status: 400, message: "Email y contraseña son requeridos" })
             }, 500)
         })
     }
@@ -19,7 +19,7 @@ export const signIn = (email, password) => {
     if (!user) { 
         return new Promise((resolve) => {
             setTimeout(() => { 
-            resolve({ error: true, status: 404, message: "User not found" })
+            resolve({ error: true, status: 404, message: "Usiario no encontrado" })
         }, 500)
     })
     }
@@ -31,7 +31,7 @@ export const signIn = (email, password) => {
     if (!match) { 
         return new Promise((resolve) => {
             setTimeout(() => { 
-            resolve({ error: true, status: 401, message: "Invalid password" })
+            resolve({ error: true, status: 401, message: "Contraseña incorrecta" })
         }, 500)
     })
     }

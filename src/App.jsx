@@ -1,32 +1,30 @@
-import Navbar from "./components/navbar/Navbar"
-import { Routes, Route } from "react-router-dom"
-import Home from "./pages/home/Home"
-import Products from "./pages/products/Products"
-import Contact from "./pages/contact/Contact"
-import Footer from "./components/footer/Footer"
-import Error from "./pages/error/Error"
-import ProductDetail from "./pages/product_detail/ProductDetail"
-import { cartContext } from "./context/cart/CartContext"
-import Cart from "./components/cart/Cart"
-import React, { useContext } from "react"
-import { HiOutlineShoppingCart } from "react-icons/hi"
-import Login from "./pages/login/Login"
-function App() {
-  const { isVisible, handleOpenCart, getItemCount } = useContext(cartContext)
+// App.js
+import { Routes, Route, useLocation } from "react-router-dom";
+import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import Navbar from "./components/navbar/Navbar";
+import Home from "./pages/home/Home";
+import Products from "./pages/products/Products";
+import Contact from "./pages/contact/Contact";
+import Footer from "./components/footer/Footer";
+import Error from "./pages/error/Error";
+import ProductDetail from "./pages/product_detail/ProductDetail";
+import Cart from "./components/cart/Cart";
+import { cartContext } from "./context/cart/CartContext";
+import { HiOutlineShoppingCart } from "react-icons/hi";
+import Login from "./pages/login/Login";
+import React, { useContext } from "react";
+import "./App.css";
 
-  let count = getItemCount()
+
+
+
+function App() {
+  const { isVisible, handleOpenCart, getItemCount } = useContext(cartContext);
 
   return (
     <div className="App">
       <Navbar />
-      <Routes>
-        < Route path="/" element={<Home />} />
-        < Route path="/productos" element={<Products />} />
-        < Route path="/productos/:id" element={<ProductDetail />} />
-        < Route path="/contacto" element={<Contact />} />
-        < Route path="/login" element={<Login />} />
-        < Route path="/*" element={<Error />} />
-      </Routes>
+      <AnimatedRoutes />
       {
         !isVisible &&
         <button className="cart_button" onClick={handleOpenCart}>
@@ -39,7 +37,31 @@ function App() {
       <Cart />
       <Footer />
     </div>
-  )
+  );
 }
+//* Animaciones para las rutas
+const AnimatedRoutes = () => {
+  const location = useLocation();
 
-export default App
+  return (
+    <TransitionGroup>
+      <CSSTransition
+        key={location.key}
+        timeout={300}
+        classNames="fade"
+      >
+        <div className="content">
+          <Routes location={location}>
+            <Route path="/" element={<Home />} />
+            <Route path="/productos" element={<Products />} />
+            <Route path="/productos/:id" element={<ProductDetail />} />
+            <Route path="/contacto" element={<Contact />} />
+            <Route path="/login" element={<Login />} />
+            <Route path="/*" element={<Error />} />
+          </Routes>
+        </div>
+      </CSSTransition>
+    </TransitionGroup>
+  );
+};
+export default App;
