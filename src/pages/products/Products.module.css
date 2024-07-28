@@ -41,9 +41,19 @@
 .products h2 {
     color: #140F0B;
     font-size: 3.3rem;
+    margin: 120px;
 }
 
+.loading_cont {
+    height: 100%;
+    min-height: 50vh;
+    display: flex;
+    justify-content: center;
+}
 
+.loading_cont span {
+    margin-top: 200px;
+}
 
 .products_cont {
     display: flex;
@@ -57,6 +67,19 @@
     margin: 80px auto;
 }
 
-.categories_cont {
-    margin-top: 120px;
+.filter_cont {
+    width: 100%;
+    max-width: 1200px;
+    margin: 0 auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.filter_cont input {
+    height: 48px;
+    width: 100%;
+    max-width: 400px;
+    padding: 12px;
+    border-radius: 6px;
+    border: 1px solid #a7a7a7;
 }

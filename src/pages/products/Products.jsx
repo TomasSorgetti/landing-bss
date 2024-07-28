@@ -37,7 +37,7 @@ class Products extends Component {
             });
         }
     }
-    
+
     searchProducts = async () => {
         this.setState({ loading: true });
         try {
@@ -63,9 +63,9 @@ class Products extends Component {
             <main>
                 <section className={styles.hero_banner}>
                     <div className={styles.wrapper}>
-                        <h1>Los productos Moka
-                            <span>Coffe</span> asdasdj asdkjalsd</h1>
-                        <p>Los productos sdfsd  asdasdj asdkjalsd asdnaskd jhasd asjdaskd aksjd askd  asdsa.</p>
+                        <h1>Descubre lo mejor de Moka
+                            <span>Coffee</span></h1>
+                        <p>Una experiencia única con nuestra selección exclusiva de café y bocadillos.</p>
                     </div>
                 </section>
                 <section className={styles.products}>
@@ -82,20 +82,24 @@ class Products extends Component {
                             </select>
                         </div>
                     </div>
-                    {this.state.loading && <h2>Cargando...</h2>}
-                    <ul className={styles.products_cont}>
-                        {this.state.products?.map(({ id, name, price, description, isBestSeller, image }) => (
-                            <ProductCard
-                                key={id}
-                                id={id}
-                                name={name}
-                                price={price}
-                                isBestSeller={isBestSeller}
-                                image={image}
-                                description={description}
-                            />
-                        ))}
-                    </ul>
+                    {this.state.loading
+                        ?
+                        <div className={styles.loading_cont}><span>Cargando...</span></div>
+                        :
+                        <ul className={styles.products_cont}>
+                            {this.state.products?.map(({ id, name, price, description, isBestSeller, image }) => (
+                                <ProductCard
+                                    key={id}
+                                    id={id}
+                                    name={name}
+                                    price={price}
+                                    isBestSeller={isBestSeller}
+                                    image={image}
+                                    description={description}
+                                />
+                            ))}
+                        </ul>
+                    }
                 </section>
             </main >
         );

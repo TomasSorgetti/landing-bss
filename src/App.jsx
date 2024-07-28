@@ -10,6 +10,7 @@ import { cartContext } from "./context/cart/CartContext"
 import Cart from "./components/cart/Cart"
 import React, { useContext } from "react"
 import { HiOutlineShoppingCart } from "react-icons/hi"
+import Login from "./pages/login/Login"
 function App() {
   const { isVisible, handleOpenCart, getItemCount } = useContext(cartContext)
 
@@ -23,6 +24,7 @@ function App() {
         < Route path="/productos" element={<Products />} />
         < Route path="/productos/:id" element={<ProductDetail />} />
         < Route path="/contacto" element={<Contact />} />
+        < Route path="/login" element={<Login />} />
         < Route path="/*" element={<Error />} />
       </Routes>
       {
