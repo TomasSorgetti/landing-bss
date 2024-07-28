@@ -7,7 +7,7 @@ import CartItem from "../cart_item/CartItem"
 
 const Cart = () => {
     const cartRef = useRef(null);
-    const { items, getTotalCartAmount, isVisible, handleCloseCart } = useContext(cartContext)
+    const { items, getTotalCartAmount, isVisible, handleCloseCart, emptyCart } = useContext(cartContext)
     const totalAmount = getTotalCartAmount()
 
 
@@ -28,8 +28,8 @@ const Cart = () => {
     return (
 
         <div ref={cartRef} className={`${styles.cart} ${isVisible ? styles.show : styles.hide}`}>
-            <span>Carrito de compras</span>
-            <div>
+            <span className={styles.cart_title}>Carrito de compras</span>
+            <ul>
                 {products?.map((product) => {
                     if (items[product.id] !== 0) {
                         return (
@@ -38,13 +38,15 @@ const Cart = () => {
                     }
                 }
                 )}
-            </div>
-            <div>
+            </ul>
+            <div className={styles.cart_footer}>
                 {totalAmount > 0 ?
-                    <div>
+                    <div className={styles.cart_footer_text}>
                         <span>Total: ${totalAmount}</span>
-                        <button>Vaciar</button>
-                        <button>Comprar</button>
+                        <div>
+                            <button onClick={emptyCart} className={styles.clear_button}>Vaciar</button>
+                            <button className={styles.buy_button}>Comprar</button>
+                        </div>
                     </div>
                     : <span>Carrito vacío</span>}
             </div>

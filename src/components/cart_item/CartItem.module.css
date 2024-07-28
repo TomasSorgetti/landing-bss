@@ -1,0 +1,36 @@
+.cart_item {
+    display: flex;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+}
+
+.cart_item img {
+    width: 100px;
+    height: 100px;
+}
+
+
+
+.cart_item_count {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 26px;
+}
+
+.cart_item_count input {
+    width: 80px;
+    text-align: center;
+    margin: 0 10px;
+    height: 100%;
+}
+
+.cart_item_count button {
+    background-color: #E68541;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    height: 100%;
+    width: 26px;
+}

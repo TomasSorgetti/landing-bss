@@ -7,7 +7,7 @@ import Footer from "./components/footer/Footer"
 import { cartContext } from "./context/cart/CartContext"
 import Cart from "./components/cart/Cart"
 import React, { useContext } from "react"
-import cart from "./assets/images/cart_icon.png"
+import { HiOutlineShoppingCart } from "react-icons/hi"
 function App() {
   const { isVisible, handleOpenCart, getItemCount } = useContext(cartContext)
 
@@ -23,10 +23,10 @@ function App() {
       </Routes>
       {
         !isVisible &&
-        <button className="cart_button" onClick={handleOpenCart} >
-          <img src={cart} alt="cart icon" />
+        <button className="cart_button" onClick={handleOpenCart}>
+          <HiOutlineShoppingCart className="cart_icon" />
           <div>
-            <span>{count}</span>
+            <span>{getItemCount()}</span>
           </div>
         </button>
       }

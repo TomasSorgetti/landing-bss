@@ -46,10 +46,13 @@ const CartContextProvider = (props) => {
     const handleCloseCart = () => {
         setIsVisible(false);
     };
+    const emptyCart = () => {
+        setItems(getDefaultCart())
+    };
 
 
 
-    const contextValue = { items, getItemCount, addToCart, removeFromCart, updateCartItemCount, getTotalCartAmount, handleOpenCart, handleCloseCart, isVisible }
+    const contextValue = { items, getItemCount, addToCart, removeFromCart, updateCartItemCount, getTotalCartAmount, handleOpenCart, handleCloseCart, isVisible, emptyCart }
 
     return (
         <cartContext.Provider value={contextValue}>
