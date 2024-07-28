@@ -9,18 +9,22 @@
 cd ./tu-carpeta
 ```
 
+Para clonar el proyecto:
 ```bash
 git clone https://github.com/TomasSorgetti/landing-bss.git
 ```
 
+Para instalar todas las dependencias:
 ```bash
 npm install
 ```
 
+Para abrir en el ide el proyecto:
 ```bash
-code .              # para abrir en el ide el proyecto
+code .              
 ```
 
+Para levantar el proyecto en localhost:
 ```bash
 npm run dev
 ```
@@ -75,10 +79,14 @@ app/
 └── README.md  
 ```
  
+
+## Cosas a tener en cuenta sobre el proyecto:
+- Se utilizaron mocks para simular la conección con el backend
+- Los servicios tienen un pequeño retrazo para simular
+
 ## Por qué el uso de useContext
 asdkasjl kdaslkd jalksdj alsdjlak sdlkad lkasdj lasjd las
 
-##
 
 
 
