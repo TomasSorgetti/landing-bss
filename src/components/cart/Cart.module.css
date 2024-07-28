@@ -1,16 +1,13 @@
-.cart_cont {
-    position: fixed;
-    top: 0;
-    right: 0;
-    overflow: hidden;
-}
+.cart_cont {}
 
 .cart {
     background-color: white;
     height: 100vh;
     width: 400px;
     z-index: 10;
-
+    position: fixed;
+    top: 0;
+    right: 0;
 }
 
 .hide {

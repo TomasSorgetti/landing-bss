@@ -4,7 +4,7 @@ import Home from "./pages/home/Home"
 import Products from "./pages/products/Products"
 import Contact from "./pages/contact/Contact"
 import Footer from "./components/footer/Footer"
-import CartContextProvider, { cartContext } from "./context/cart/CartContext"
+import { cartContext } from "./context/cart/CartContext"
 import Cart from "./components/cart/Cart"
 import React, { useContext } from "react"
 import cart from "./assets/images/cart_icon.png"
@@ -30,7 +30,6 @@ function App() {
           </div>
         </button>
       }
-
       <Cart />
       <Footer />
     </>

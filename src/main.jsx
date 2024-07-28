@@ -8,7 +8,6 @@ import CartContextProvider, { cartContext } from './context/cart/CartContext.jsx
 ReactDOM.createRoot(document.getElementById('root')).render(
   <BrowserRouter>
     <CartContextProvider value={cartContext}>
-
       <App />
     </CartContextProvider>
   </BrowserRouter>

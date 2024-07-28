@@ -34,21 +34,19 @@ body {
 }
 
 .cart_button {
-  background-color: white;
+  background-color: transparent;
   z-index: 1;
   position: fixed;
   bottom: 200px;
   right: 80px;
-  height: 80px;
-  width: 80px;
-  background-color: transparent;
+  height: 100px;
+  width: 100px;
   border: none;
   cursor: pointer;
-
 }
 
 .cart_button div {
-  background-color: blueviolet;
+  background-color: #E68541;
   height: 30px;
   width: 30px;
   border-radius: 50%;
