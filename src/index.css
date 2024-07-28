@@ -33,6 +33,13 @@ body {
   font-family: 'Poppins', sans-serif;
 }
 
+.App {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
 .cart_button {
   background-color: transparent;
   z-index: 1;
@@ -44,10 +51,12 @@ body {
   border: none;
   cursor: pointer;
 }
+
 .cart_icon {
   color: #636363;
   font-size: 3.5rem
 }
+
 .cart_button div {
   position: absolute;
   top: 10px;

@@ -1,6 +1,6 @@
 import styles from "./Products.module.css"
 import { Component } from 'react';
-import { getAllProducts, getProductsByName, getProductsByCategory } from '../../services/products/product.service';
+import { getAllProducts, getProductsFiltered } from '../../services/products/product.service';
 import ProductCard from '../../components/product_card/ProductCard';
 import { getAllCategories } from "../../services/categories/categories.service";
 
@@ -11,6 +11,8 @@ class Products extends Component {
             products: [],
             categories: [],
             loading: false,
+            search: '',
+            category: 0,
         };
     }
     componentDidMount() {
@@ -35,52 +37,26 @@ class Products extends Component {
             });
         }
     }
-    searchProductsByCategory = (category) => {
-
-        this.setState({
-            loading: true
-        })
+    
+    searchProducts = async () => {
+        this.setState({ loading: true });
         try {
-            const getData = async () => {
-                await getProductsByCategory(Number(category))
-                    .then((products) => {
-                        this.setState({
-                            products: products,
-                            loading: false,
-                        });
-                    })
-            }
-            getData()
-        } catch (error) {
-            console.log(error);
+            const products = await getProductsFiltered(this.state.search, this.state.category);
             this.setState({
+                products: products,
                 loading: false,
             });
-        }
-    }
-    searchProductsByName = (name) => {
-
-        this.setState({
-            loading: true
-        })
-        try {
-            const getData = async () => {
-                await getProductsByName(name)
-                    .then((products) => {
-                        this.setState({
-                            products: products,
-                            loading: false,
-                        });
-                    })
-            }
-            getData()
         } catch (error) {
             console.log(error);
-            this.setState({
-                loading: false,
-            });
+            this.setState({ loading: false });
         }
     }
+    handleNameChange = (event) => {
+        this.setState({ search: event.target.value }, this.searchProducts);
+    };
+    handleCategoryChange = (event) => {
+        this.setState({ category: Number(event.target.value) }, this.searchProducts);
+    };
 
     render() {
         return (
@@ -95,10 +71,10 @@ class Products extends Component {
                 <section className={styles.products}>
                     <h2>Nuestros productos</h2>
                     <div className={styles.filter_cont}>
-                        <input type="text" name="search" onChange={(event) => this.searchProductsByName(event.target.value)} placeholder="Buscar" />
+                        <input type="text" name="search" onChange={this.handleNameChange} placeholder="Buscar" />
                         <div className={styles.category_cont}>
                             <label htmlFor="category">Categoría:</label>
-                            <select id="category" name="category" onChange={(event) => this.searchProductsByCategory(event.target.value)}>
+                            <select id="category" name="category" onChange={this.handleCategoryChange}>
                                 <option value={0}>Todos</option>
                                 {this.state.categories?.map(({ name, id }) => (
                                     <option key={id} value={id}>{name}</option>
