@@ -4,6 +4,7 @@
 
 
 ## Como Iniciar
+**aclaración:** debes de tener instalado node.js y un manejador de paquetes, como npm.
 
 ```bash
 cd ./tu-carpeta
@@ -78,22 +79,46 @@ app/
 ├── config files                
 └── README.md  
 ```
- 
+
+## Product Mock
+
+```bash
+{
+    id: 1,
+    name: "Café con leche",
+    price: 100,
+    description:"descripcion de prueba",
+    category: [1],
+    isBestSeller: true,
+    image:{
+        url: coffee,
+        alt:"café con leche",
+    },
+}
+
+```
+
+## User Mock
+
+```bash
+{
+    id: 1,
+    name: "admin",
+    email: "admin@mail.com",
+    password: "admin123",
+},  
+```
+
+
 
 ## Cosas a tener en cuenta sobre el proyecto:
 - Se utilizaron mocks para simular la conección con el backend
-- Los servicios tienen un pequeño retrazo para simular
-
-## Por qué el uso de useContext
-asdkasjl kdaslkd jalksdj alsdjlak sdlkad lkasdj lasjd las
+- Se utilizó useContext para crear el carrito de compras y el login, pero 
+para un mejor manejo, lo ideal es utilizar redux.
 
 
 
 
-landing-bss
-Desafío técnico React para Boost Software Studio
-
-Actividad de referencia.
 
 Te invitamos a realizar una actividad práctica para demostrar tus habilidades en React.js. La actividad consiste en crear una landing page básica para un negocio gastronómico, debe contar con las siguientes características:  
 
