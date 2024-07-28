@@ -1,9 +1,12 @@
 import styles from "./ProductCard.module.css"
+import { cartContext } from "../../context/cart/CartContext"
+import { useContext } from "react"
+const ProductCard = ({ id, name, price, description, isBestSeller, image }) => {
 
-const ProductCard = ({ name, price, description, isBestSeller, image }) => {
-
+    const { addToCart, handleOpenCart } = useContext(cartContext)
     const handleClick = () => {
-        alert(`Comprando ${name}`)
+        addToCart(id)
+        handleOpenCart()
     }
 
     return (

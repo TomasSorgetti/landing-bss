@@ -6,6 +6,6 @@ export const postContact = (data) => {
                 status: 200,
                 message: "Message sent successfully"
             })
-        }, 400);
+        }, 1000);
     })
 }

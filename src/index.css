@@ -32,3 +32,30 @@
 body {
   font-family: 'Poppins', sans-serif;
 }
+
+.cart_button {
+  background-color: white;
+  z-index: 1;
+  position: fixed;
+  bottom: 200px;
+  right: 80px;
+  height: 80px;
+  width: 80px;
+  background-color: transparent;
+  border: none;
+  cursor: pointer;
+
+}
+
+.cart_button div {
+  background-color: blueviolet;
+  height: 30px;
+  width: 30px;
+  border-radius: 50%;
+  transform: translate(60px, -95px);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: white;
+  font-weight: 600;
+}

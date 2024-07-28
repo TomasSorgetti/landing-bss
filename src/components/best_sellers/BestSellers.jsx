@@ -38,6 +38,7 @@ class BestSellers extends Component {
                     {this.state.products?.map(({ id, name, price, description, isBestSeller, image }) => (
                         <ProductCard
                             key={id}
+                            id={id}
                             name={name}
                             price={price}
                             isBestSeller={isBestSeller}
