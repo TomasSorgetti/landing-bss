@@ -1,12 +1,11 @@
-.sidebar {
-    width: 360px;
-    background-color: #140F0B;
-    color: white;
-    padding: 40px;
-    position: fixed;
-    left: 0;
-    top: 240px;
+.hero_banner {
+    background-image: url("../../assets/images/products_hero_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 660px;
 }
+.hero_banner 
+
 
 .products_cont {
     display: flex;

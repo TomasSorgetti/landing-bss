@@ -63,7 +63,12 @@ class Products extends Component {
     render() {
         return (
             <main>
-                <h1>Products</h1>
+                <section className={styles.hero_banner}>
+                    <div>
+                        <h1>Products</h1>
+                        <p>Conoce nuestros productos</p>
+                    </div>
+                </section>
                 <aside className={styles.sidebar}>
                     <h2>Categorías</h2>
                     <ul className={styles.categories_cont}>
