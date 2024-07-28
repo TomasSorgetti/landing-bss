@@ -1,7 +1,8 @@
 import { useParams } from "react-router-dom"
 import styles from "./Product.module.css"
-import { useEffect, useState } from "react"
+import { useContext, useEffect, useState } from "react"
 import { getProductById } from "../../services/products/product.service"
+import { cartContext } from "../../context/cart/CartContext"
 
 
 
@@ -9,6 +10,8 @@ const ProductDetail = () => {
   const { id } = useParams()
   const [product, setProduct] = useState({})
   const [loading, setLoading] = useState(false)
+
+  const { addToCart, handleOpenCart } = useContext(cartContext)
 
   useEffect(() => {
     try {
@@ -31,23 +34,33 @@ const ProductDetail = () => {
     }
   }, [])
 
+  const handleClick = () => {
+    addToCart(product.id)
+    handleOpenCart()
+  }
+
   return (
-    <main>
+    <main className={styles.product_detail}>
+      <section className={styles.hero_banner}>
+        <h1>Detalles del producto</h1>
+      </section>
 
-      {loading && <h2>Cargando...</h2>}
-      {!loading && product.name && (
-        <section className={styles.product_cont}>
-          <h2>{product.name}</h2>
-          <img src={product.image.url} alt={product.image.alt} />
-          <div>
-            <h3>Precio</h3>
-            <p>{product.price}</p>
-            <h3>Descripción</h3>
-            <p>{product.description}</p>
-          </div>
+      {loading ?
+        <h2>Cargando...</h2>
+        :
+        product.name && (
+          <article className={styles.product_cont}>
+            <img src={product.image.url} alt={product.image.alt} />
+            <div className={styles.product_info}>
+              <h2>{product.name}</h2>
+              <p>{product.description}</p>
+              <span className={styles.price}>$ {product.price}</span>
+              <button className="buy" onClick={handleClick}>Comprar</button>
+            </div>
 
-        </section>
-      )}
+          </article>
+        )
+      }
     </main>
   )
 }

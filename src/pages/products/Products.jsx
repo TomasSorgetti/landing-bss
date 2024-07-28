@@ -1,8 +1,8 @@
 import styles from "./Products.module.css"
 import { Component } from 'react';
 import { getAllProducts, getProductsFiltered } from '../../services/products/product.service';
-import ProductCard from '../../components/product_card/ProductCard';
 import { getAllCategories } from "../../services/categories/categories.service";
+import ProductCards from "../../components/product_cards/ProductCards";
 
 class Products extends Component {
     constructor(props) {
@@ -86,19 +86,7 @@ class Products extends Component {
                         ?
                         <div className={styles.loading_cont}><span>Cargando...</span></div>
                         :
-                        <ul className={styles.products_cont}>
-                            {this.state.products?.map(({ id, name, price, description, isBestSeller, image }) => (
-                                <ProductCard
-                                    key={id}
-                                    id={id}
-                                    name={name}
-                                    price={price}
-                                    isBestSeller={isBestSeller}
-                                    image={image}
-                                    description={description}
-                                />
-                            ))}
-                        </ul>
+                        <ProductCards products={this.state.products} />
                     }
                 </section>
             </main >

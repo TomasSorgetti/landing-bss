@@ -1,7 +1,7 @@
 import { Component } from 'react';
 import styles from "./BestSellers.module.css"
 import { getBestSellersProducts } from '../../services/products/product.service';
-import ProductCard from '../product_card/ProductCard';
+import ProductCards from '../product_cards/ProductCards';
 
 class BestSellers extends Component {
     constructor(props) {
@@ -35,17 +35,7 @@ class BestSellers extends Component {
                 <h2>Más vendidos</h2>
                 <ul>
                     {this.state.loading && <li>Cargando...</li>}
-                    {this.state.products?.map(({ id, name, price, description, isBestSeller, image }) => (
-                        <ProductCard
-                            key={id}
-                            id={id}
-                            name={name}
-                            price={price}
-                            isBestSeller={isBestSeller}
-                            image={image}
-                            description={description}
-                        />
-                    ))}
+                    <ProductCards products={this.state.products} />
                 </ul>
             </section>
         );

@@ -55,17 +55,6 @@
     margin-top: 200px;
 }
 
-.products_cont {
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: center;
-    gap: 60px;
-    margin: 60px 0 120px 0;
-    list-style: none;
-    width: 100%;
-    max-width: 1440px;
-    margin: 80px auto;
-}
 
 .filter_cont {
     width: 100%;
