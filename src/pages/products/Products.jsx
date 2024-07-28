@@ -98,7 +98,7 @@ class Products extends Component {
                         <input type="text" name="search" onChange={(event) => this.searchProductsByName(event.target.value)} placeholder="Buscar" />
                         <div className={styles.category_cont}>
                             <label htmlFor="category">Categoría:</label>
-                            <select name="category" onChange={(event) => this.searchProductsByCategory(event.target.value)}>
+                            <select id="category" name="category" onChange={(event) => this.searchProductsByCategory(event.target.value)}>
                                 <option value={0}>Todos</option>
                                 {this.state.categories?.map(({ name, id }) => (
                                     <option key={id} value={id}>{name}</option>

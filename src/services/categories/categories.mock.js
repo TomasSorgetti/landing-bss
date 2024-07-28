@@ -7,8 +7,4 @@ export const categories = [
         id: 2,
         name: "comidas"
     },
-    {
-        id: 3,
-        name: "algomas"
-    },
 ]

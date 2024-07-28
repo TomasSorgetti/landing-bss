@@ -1,4 +1,3 @@
-
 .hero_banner_cont {
     height: 900px;
     background-image: url("../../assets/images/hero_bg.png");
@@ -35,6 +34,7 @@
 
 .hero_banner_cont div h1 .hero_title_span {
     font-weight: 700;
+    color: #E68541;
 }
 
 

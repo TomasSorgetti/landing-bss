@@ -41,7 +41,7 @@ const CartContextProvider = (props) => {
         setItems((prev) => ({ ...prev, [itemId]: value }))
     }
     const handleOpenCart = () => {
-        setIsVisible(prev => !prev);
+        setIsVisible(true);
     };
     const handleCloseCart = () => {
         setIsVisible(false);

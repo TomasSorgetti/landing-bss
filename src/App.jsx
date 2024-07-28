@@ -4,6 +4,7 @@ import Home from "./pages/home/Home"
 import Products from "./pages/products/Products"
 import Contact from "./pages/contact/Contact"
 import Footer from "./components/footer/Footer"
+import Error from "./pages/error/Error"
 import { cartContext } from "./context/cart/CartContext"
 import Cart from "./components/cart/Cart"
 import React, { useContext } from "react"
@@ -20,6 +21,7 @@ function App() {
         < Route path="/" element={<Home />} />
         < Route path="/productos" element={<Products />} />
         < Route path="/contacto" element={<Contact />} />
+        < Route path="/*" element={<Error />} />
       </Routes>
       {
         !isVisible &&

@@ -11,7 +11,7 @@ class Home extends Component {
                 <section className={styles.hero_banner_cont}>
                     <div>
                         <span className={styles.hero_text_span}>CAFÉ Y PASTELERÍA</span>
-                        <h1><span className={styles.hero_title_span}>Moka Coffe</span>, un rincón de <br /> tranquilidad y sabor en <br /> cada taza</h1>
+                        <h1>Moka <span className={styles.hero_title_span}>Coffe</span>, un rincón de <br /> tranquilidad y sabor en <br /> cada taza</h1>
                         <Link className={styles.hero_button} to="/productos">comprar</Link>
                     </div>
                 </section>

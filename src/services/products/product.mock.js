@@ -1,24 +1,16 @@
 import coffee from "../../assets/images/products/coffee.png"
+import medialunas from "../../assets/images/products/medialunas.png"
+import medialunas_rellenas from "../../assets/images/products/medialunas_rellenas.png"
+import alfajor from "../../assets/images/products/alfajor.png"
+
 
 export const products = [
         {
             id: 1,
-            name: "Café",
+            name: "Café con leche",
             price: 100,
             description:"descripcion de prueba",
             category: [1],
-            isBestSeller: true,
-            image:{
-                url: coffee,
-                alt:"asdasd"
-            }
-        },
-        {
-            id: 2,
-            name: "Café con leche",
-            price: 150,
-            description:"descripcion de prueba",
-            category: [2],
             isBestSeller: true,
             image:{
                 url: coffee,
@@ -26,48 +18,60 @@ export const products = [
             }
         },
         {
-            id: 3,
+            id: 2,
             name: "Café con crema",
-            price: 200,
+            price: 150,
             description:"descripcion de prueba",
             category: [1],
-            isBestSeller: true,
             image:{
                 url: coffee,
                 alt:"café con crema"
             }
         },
         {
-            id: 4,
-            name: "Cafe con leche y crema",
-            price: 250,
+            id: 3,
+            name: "Café con leche y crema",
+            price: 200,
             description:"descripcion de prueba",
-            category: [3],
+            category: [1],            
             image:{
                 url: coffee,
                 alt:"café con leche y crema"
             }
         },
         {
-            id: 5,
-            name: "Cafe descafeinado",
+            id: 4,
+            name: "Medialunas",
             price: 250,
             description:"descripcion de prueba",
             category: [2],
+            isBestSeller: true,
             image:{
-                url: coffee,
-                alt:"asdasd"
+                url: medialunas,
+                alt:"Medialunas"
+            }
+        },
+        {
+            id: 5,
+            name: "Medialunas rellenas",
+            price: 250,
+            description:"descripcion de prueba",
+            category: [2],
+            isBestSeller: true,
+            image:{
+                url: medialunas_rellenas,
+                alt:"Medialunas rellenas"
             }
         },
         {
             id: 6,
-            name: "Cafe espresso",
+            name: "Alfajores de maicena",
             price: 250,
             description:"descripcion de prueba",
-            category: [3],
+            category: [2],            
             image:{
-                url: coffee,
-                alt:"asdasd"
+                url: alfajor,
+                alt:"Alfajores de maicena"
             }
         },
 ]

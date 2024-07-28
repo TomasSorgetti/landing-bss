@@ -20,7 +20,7 @@ const ProductCard = ({ id, name, price, description, isBestSeller, image }) => {
             </div>
             <div className={styles.product_info_slide}>
                 <p>{description}</p>
-                <button onClick={handleClick} className={styles.buy_button}>Comprar</button>
+                <button onClick={handleClick} className={`${styles.buy_button} buy`}>Comprar</button>
             </div>
             {isBestSeller && <span className={styles.best_seller}>más vendido</span>}
         </li>
