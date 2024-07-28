@@ -1,9 +1,13 @@
 # Desafío técnico React para Boost Software Studio
 
-## Deploy: [proyecto]("link")
+## Deploy: [Proyecto react shop]("reactshop.tomassorgetti.com.ar")
 
 
 ## Como Iniciar
+
+```bash
+cd ./tu-carpeta
+```
 
 ```bash
 git clone https://github.com/TomasSorgetti/landing-bss.git
@@ -14,7 +18,11 @@ npm install
 ```
 
 ```bash
-npm npm run dev
+code .              # para abrir en el ide el proyecto
+```
+
+```bash
+npm run dev
 ```
 
 
@@ -25,36 +33,52 @@ app/
 ├── public/                    
 ├── src/                       
 │   ├── assets/                
-│   │   ├── design/                         # Imágenes del diseño
-│   │   ├── fonts/                          # Carpeta con las fonts
-│   │   └── images/                         # Carpeta que contiene todas las imágenes
+│   │   ├── design/                     # Imágenes del diseño
+│   │   ├── fonts/                      # Carpeta con las fonts
+│   │   └── images/                     # Carpeta que contiene todas las imágenes
 │   │   
-│   ├── components/                         # Carpeta que contiene todos los componentes
-│   │   ├── button/                             => Function Component
-│   │   ├── footer/                             => Function Component
-│   │   └── navbar/                             => Class Component
+│   ├── components/                     # Carpeta que contiene todos los componentes
+│   │   ├── best_sellers/                   => Class Component
+│   │   ├── cart/                           => Function Component
+│   │   ├── cart_item/                      => Function Component
+│   │   ├── footer/                         => Function Component
+│   │   ├── navbar/                         => Function Component
+│   │   ├── product_card/                   => Function Component
+│   │   └── products_cards/                 => Function Component
 │   │   
-│   ├── pages/                              # Carpeta que contiene todas las páginas
-│   │   ├── contact/                            => Class Component
-│   │   ├── home/                               => Function Component
-│   │   └── products/                           => Class Component
+│   ├── context/                        # Providers useContext de user y cart
+│   │   ├── cart/                           => Function Component
+│   │   └── user/                           => Class Component
 │   │   
-│   ├── services/                           # Carpeta para simular los llamados a la api
-│   │   └── product.mock.js                 # Mock de los productos
-│   │   └── product.service.js              # Funciones para llamado a la api
+│   ├── helpers/                 
+│   │   └── contact.validate.js         # Funcion para validación del formulario
 │   │   
-│   ├── utils/                 
-│   │   └── formatDate.js
+│   ├── pages/                          # Carpeta que contiene todas las páginas
+│   │   ├── contact/                        => Class Component
+│   │   ├── error/                          => Function Component
+│   │   ├── home/                           => Function Component
+│   │   ├── login/                          => Function Component
+│   │   ├── product_detail/                 => Function Component
+│   │   └── products/                       => Class Component
 │   │   
-│   ├── App.jsx                                 => Function Component                        
-│   └── main.jsx                                => Function Component
+│   ├── services/                       # Carpeta para simular los llamados a la api
+│   │   └── categories/                 # Mock y servicios de categorías
+│   │   └── contact/                    # Mock y servicios del from de contacto
+│   │   └── products/                   # Mock y servicios de productos
+│   │   └── users/                      # Mock y servicios de usuarios y simulacro de auth
+│   │   
+│   ├── App.jsx                             => Function Component                        
+│   └── main.jsx                            => Function Component
 │                               
-├── index.html                
+├── index.html                          # Archivos de configuración
 ├── config files                
 └── README.md  
 ```
  
+## Por qué el uso de useContext
+asdkasjl kdaslkd jalksdj alsdjlak sdlkad lkasdj lasjd las
 
+##
 
 
 
