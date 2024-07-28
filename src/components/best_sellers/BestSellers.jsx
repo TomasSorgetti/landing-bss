@@ -1,6 +1,6 @@
 import { Component } from 'react';
 import styles from "./BestSellers.module.css"
-import { getBestSellersProducts } from '../../services/product.service';
+import { getBestSellersProducts } from '../../services/products/product.service';
 import ProductCard from '../product_card/ProductCard';
 
 class BestSellers extends Component {

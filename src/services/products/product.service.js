@@ -38,14 +38,16 @@ export const getProductsByCategory = (productCategory) => {
 }
 
 export const getProductsByName = (name) => {
+    const productList = products.filter((prod) =>
+        prod.name.toLowerCase().includes(name.toLowerCase()))
     return new Promise((resolve) => {
-        if(!name) {
+        if(!name || name === "" || productList.length === 0) {
             resolve(products)
         }
         setTimeout(()=>{
-            resolve(products.filter((prod) =>
-            prod.name.toLowerCase().includes(name.toLowerCase())
-    ));
+            resolve(
+                productList)
+    
         }, 600);
     })
 }

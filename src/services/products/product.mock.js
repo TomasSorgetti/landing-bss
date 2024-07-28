@@ -1,4 +1,4 @@
-import coffee from "../assets/images/products/coffee.png"
+import coffee from "../../assets/images/products/coffee.png"
 
 export const products = [
         {

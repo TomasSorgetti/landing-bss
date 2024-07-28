@@ -1,8 +1,8 @@
 import styles from "./Products.module.css"
 import { Component } from 'react';
-import { getAllProducts, getProductsByName, getProductsByCategory } from '../../services/product.service';
+import { getAllProducts, getProductsByName, getProductsByCategory } from '../../services/products/product.service';
 import ProductCard from '../../components/product_card/ProductCard';
-import { getAllCategories } from "../../services/categories.service";
+import { getAllCategories } from "../../services/categories/categories.service";
 
 class Products extends Component {
     constructor(props) {
@@ -35,7 +35,6 @@ class Products extends Component {
             });
         }
     }
-
     searchProductsByCategory = (category) => {
 
         this.setState({
