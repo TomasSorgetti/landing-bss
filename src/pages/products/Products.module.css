@@ -3,8 +3,46 @@
     background-repeat: no-repeat;
     background-size: cover;
     height: 660px;
+    color: white;
 }
-.hero_banner 
+
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+}
+
+.wrapper h1 {
+    font-size: 3.5rem;
+    max-width: 760px;
+    font-weight: 400;
+}
+
+.wrapper h1 span {
+    color: #E68541;
+    font-weight: 700;
+}
+
+.wrapper p {
+    max-width: 600px;
+    font-size: 1.5rem;
+}
+
+.products {
+    text-align: center;
+}
+
+.products h2 {
+    color: #140F0B;
+    font-size: 3.3rem;
+}
+
 
 
 .products_cont {

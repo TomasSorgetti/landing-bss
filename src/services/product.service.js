@@ -25,13 +25,27 @@ export const getBestSellersProducts = (limit) => {
     })
 }
 
-export const getProductsByCategory= (productCategory) => {
+export const getProductsByCategory = (productCategory) => {
+    
     return new Promise((resolve) => {
         if(!productCategory) {
             resolve(products)
         }
         setTimeout(()=>{
             resolve(products.filter((prod) => prod.category.includes(productCategory)))
+        }, 600);
+    })
+}
+
+export const getProductsByName = (name) => {
+    return new Promise((resolve) => {
+        if(!name) {
+            resolve(products)
+        }
+        setTimeout(()=>{
+            resolve(products.filter((prod) =>
+            prod.name.toLowerCase().includes(name.toLowerCase())
+    ));
         }, 600);
     })
 }

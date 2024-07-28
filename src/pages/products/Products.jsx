@@ -1,9 +1,8 @@
 import styles from "./Products.module.css"
 import { Component } from 'react';
-import { getAllProducts } from '../../services/product.service';
+import { getAllProducts, getProductsByName, getProductsByCategory } from '../../services/product.service';
 import ProductCard from '../../components/product_card/ProductCard';
 import { getAllCategories } from "../../services/categories.service";
-import { getProductsByCategory } from "../../services/product.service";
 
 class Products extends Component {
     constructor(props) {
@@ -38,12 +37,36 @@ class Products extends Component {
     }
 
     searchProductsByCategory = (category) => {
+
         this.setState({
             loading: true
         })
         try {
             const getData = async () => {
-                await getProductsByCategory(category)
+                await getProductsByCategory(Number(category))
+                    .then((products) => {
+                        this.setState({
+                            products: products,
+                            loading: false,
+                        });
+                    })
+            }
+            getData()
+        } catch (error) {
+            console.log(error);
+            this.setState({
+                loading: false,
+            });
+        }
+    }
+    searchProductsByName = (name) => {
+
+        this.setState({
+            loading: true
+        })
+        try {
+            const getData = async () => {
+                await getProductsByName(name)
                     .then((products) => {
                         this.setState({
                             products: products,
@@ -64,33 +87,40 @@ class Products extends Component {
         return (
             <main>
                 <section className={styles.hero_banner}>
-                    <div>
-                        <h1>Products</h1>
-                        <p>Conoce nuestros productos</p>
+                    <div className={styles.wrapper}>
+                        <h1>Los productos Moka
+                            <span>Coffe</span> asdasdj asdkjalsd</h1>
+                        <p>Los productos sdfsd  asdasdj asdkjalsd asdnaskd jhasd asjdaskd aksjd askd  asdsa.</p>
                     </div>
                 </section>
-                <aside className={styles.sidebar}>
-                    <h2>Categorías</h2>
-                    <ul className={styles.categories_cont}>
-                        <li onClick={() => this.searchProductsByCategory(0)}>Todos</li>
-                        {this.state.categories?.map(({ id, name }) => (
-                            <li onClick={() => this.searchProductsByCategory(id)} key={id}>{name}</li>
+                <section className={styles.products}>
+                    <h2>Nuestros productos</h2>
+                    <div className={styles.filter_cont}>
+                        <input type="text" name="search" onChange={(event) => this.searchProductsByName(event.target.value)} placeholder="Buscar" />
+                        <div className={styles.category_cont}>
+                            <label htmlFor="category">Categoría:</label>
+                            <select name="category" onChange={(event) => this.searchProductsByCategory(event.target.value)}>
+                                <option value={0}>Todos</option>
+                                {this.state.categories?.map(({ name, id }) => (
+                                    <option key={id} value={id}>{name}</option>
+                                ))}
+                            </select>
+                        </div>
+                    </div>
+                    {this.state.loading && <h2>Cargando...</h2>}
+                    <ul className={styles.products_cont}>
+                        {this.state.products?.map(({ id, name, price, description, isBestSeller, image }) => (
+                            <ProductCard
+                                key={id}
+                                name={name}
+                                price={price}
+                                isBestSeller={isBestSeller}
+                                image={image}
+                                description={description}
+                            />
                         ))}
                     </ul>
-                </aside>
-                {this.state.loading && <h2>Cargando...</h2>}
-                <ul className={styles.products_cont}>
-                    {this.state.products?.map(({ id, name, price, description, isBestSeller, image }) => (
-                        <ProductCard
-                            key={id}
-                            name={name}
-                            price={price}
-                            isBestSeller={isBestSeller}
-                            image={image}
-                            description={description}
-                        />
-                    ))}
-                </ul>
+                </section>
             </main >
         );
     }
