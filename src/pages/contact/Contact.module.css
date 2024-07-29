@@ -24,6 +24,17 @@
     justify-content: start;
 }
 
+.contact_info h1 {
+    font-size: 3.5rem;
+}
+
+.contact_info p {
+    margin-top: 40px;
+    font-size: 1.2rem;
+    max-width: 620px;
+    line-height: 2.2rem;
+}
+
 .contact_form {
     max-width: 600px;
     width: 100%;

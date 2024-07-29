@@ -79,6 +79,31 @@ app/
 ├── config files                
 └── README.md  
 ```
+Moka Coffe, un rincón de
+tranquilidad y sabor en
+cada taza
+
+## Detalles a tener en cuenta sobre la app:
+- En la Home, renderiza los 3 productos más destacados.
+- En la sección de productos tiene un filtrado por categoría, que funciona en conjunto a una searchbar, 
+aunque es una simulación.
+- El formulario simula un envio a un backend que devuelve una respuesta, pero no envía a ningun lado la data.
+- 
+- Luego de agregar un producto al carrito se habilita la compra, una vez clickeado el
+botón de comprar, te dirije al login si es que no estás logueado, en caso contrario, muestra
+una alerta, aunque debería de dirigirte al checkout.
+- Para loguearte puedes utilizar un usuario dentro de los mocks en: src/services/users/user.mock.js
+- 
+
+
+## Cosas a tener en cuenta sobre el proyecto:
+- Se utilizaron mocks para simular la conección con el backend
+- Se utilizó useContext para crear el carrito de compras y el login, pero 
+para un mejor manejo, lo ideal es utilizar redux.
+- La imágen del producto esta importada de las assets para poder ser utilizada, pero debería
+ser una url de la localización del archivo en el servidor.
+
+
 
 ## Product Mock
 
@@ -108,15 +133,6 @@ app/
     password: "admin123",
 },  
 ```
-
-
-
-## Cosas a tener en cuenta sobre el proyecto:
-- Se utilizaron mocks para simular la conección con el backend
-- Se utilizó useContext para crear el carrito de compras y el login, pero 
-para un mejor manejo, lo ideal es utilizar redux.
-
-
 
 
 
