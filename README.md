@@ -135,6 +135,11 @@ ser una url de la localización del archivo en el servidor.
 ```
 
 
+## Diseño
+
+![HomePage](https://github.com/user-attachments/assets/21d4ed6d-3c68-4266-8860-137268e4f7b1)
+
+
 
 Te invitamos a realizar una actividad práctica para demostrar tus habilidades en React.js. La actividad consiste en crear una landing page básica para un negocio gastronómico, debe contar con las siguientes características:  
 
