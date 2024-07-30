@@ -78,8 +78,8 @@ class ProductsWithoutParams extends Component {
                 </section>
                 <section className={styles.products}>
                     <h2>Nuestros productos</h2>
-                    <aside className={styles.categories_cont}>
-                        <h2>Categorías</h2>
+                    <section className={styles.categories_cont}>
+                        <h3>Categorías</h3>
                         <ul>
                             {this.state.categories?.map(({ name, id }) => (
                                 <li key={id}>
@@ -87,7 +87,7 @@ class ProductsWithoutParams extends Component {
                                 </li>
                             ))}
                         </ul>
-                    </aside>
+                    </section>
                     {this.state.loading
                         ?
                         <div className={styles.loading_cont}><span>Cargando...</span></div>

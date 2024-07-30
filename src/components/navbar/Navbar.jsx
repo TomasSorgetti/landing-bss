@@ -17,47 +17,50 @@ const Navbar = () => {
 
     return (
         <nav className={`${styles.navbar} ${openNav ? (styles.active_nav) : ""}`}>
-            <Link className={styles.logo} to="/">Moka <span>Coffee</span></Link>
-            <div className={styles.mobile_nav_cont}>
-                <button className={`${styles.cart_button} ${styles.mobile_cart} nav_cart`} onClick={handleChangeCart}>
-                    <HiOutlineShoppingCart className={styles.cart_icon} />
-                    <div>
-                        <span>{getItemCount()}</span>
-                    </div>
-                </button>
+            <div className={styles.navbar_wrapper}>
 
-                <div onClick={handleChangeNav} className={`${styles.hamburger_button} ${openNav ? (styles.active) : ""}`}>
-                    <span></span>
-                    <span></span>
-                    <span></span>
-                </div>
-            </div>
-            <div className={styles.nav_links_container}>
-                <NavLink onClick={handleChangeNav} to="/" className={({ isActive }) => isActive ? styles.active_option : ""}>Inicio</NavLink>
-                <NavLink onClick={handleChangeNav} to="/categorias" className={({ isActive }) => isActive ? styles.active_option : ""}>Productos</NavLink>
-                <NavLink onClick={handleChangeNav} to="/contacto" className={({ isActive }) => isActive ? styles.active_option : ""}>Contacto</NavLink>
-
-                {
-                    isLogin && <button onClick={() => {
-                        LogoutUser()
-                        handleChangeNav()
-                    }} className={styles.logout_button}>Logout</button>
-                }
-                {
-                    !openNav &&
-
-                    <button className={styles.cart_button} onClick={handleOpenCart}>
+                <Link className={styles.logo} to="/">Moka <span>Coffee</span></Link>
+                <div className={styles.mobile_nav_cont}>
+                    <button className={`${styles.cart_button} ${styles.mobile_cart} nav_cart`} onClick={handleChangeCart}>
                         <HiOutlineShoppingCart className={styles.cart_icon} />
                         <div>
                             <span>{getItemCount()}</span>
                         </div>
                     </button>
-                }
 
-                {
-                    !isLogin &&
-                    <Button label="login" url="/login" handleClick={handleChangeNav} />
-                }
+                    <div onClick={handleChangeNav} className={`${styles.hamburger_button} ${openNav ? (styles.active) : ""}`}>
+                        <span></span>
+                        <span></span>
+                        <span></span>
+                    </div>
+                </div>
+                <div className={styles.nav_links_container}>
+                    <NavLink onClick={handleChangeNav} to="/" className={({ isActive }) => isActive ? styles.active_option : ""}>Inicio</NavLink>
+                    <NavLink onClick={handleChangeNav} to="/categorias" className={({ isActive }) => isActive ? styles.active_option : ""}>Productos</NavLink>
+                    <NavLink onClick={handleChangeNav} to="/contacto" className={({ isActive }) => isActive ? styles.active_option : ""}>Contacto</NavLink>
+
+                    {
+                        isLogin && <button onClick={() => {
+                            LogoutUser()
+                            handleChangeNav()
+                        }} className={styles.logout_button}>Logout</button>
+                    }
+                    {
+                        !openNav &&
+
+                        <button className={styles.cart_button} onClick={handleOpenCart}>
+                            <HiOutlineShoppingCart className={styles.cart_icon} />
+                            <div>
+                                <span>{getItemCount()}</span>
+                            </div>
+                        </button>
+                    }
+
+                    {
+                        !isLogin &&
+                        <Button label="login" url="/login" handleClick={handleChangeNav} />
+                    }
+                </div>
             </div>
         </nav>
     )

@@ -1,6 +1,5 @@
 // App.js
-import { Routes, Route, useLocation } from "react-router-dom";
-import { CSSTransition, TransitionGroup } from 'react-transition-group';
+import { Routes, Route } from "react-router-dom";
 import Navbar from "./components/navbar/Navbar";
 import Home from "./pages/home/Home";
 import Products from "./pages/products/Products";
@@ -15,6 +14,7 @@ import { HiOutlineShoppingCart } from "react-icons/hi";
 import Login from "./pages/login/Login";
 import React, { useContext } from "react";
 import "./App.css";
+import ScrollToTop from "./helpers/scrollToTop";
 
 
 
@@ -25,7 +25,16 @@ function App() {
   return (
     <div className="App">
       <Navbar />
-      <AnimatedRoutes />
+      <ScrollToTop />
+      <Routes location={location}>
+        <Route path="/" element={<Home />} />
+        <Route path="/categorias" element={<Categories />} />
+        <Route path="/categorias/:categoryId" element={<Products />} />
+        <Route path="/producto/:id" element={<ProductDetail />} />
+        <Route path="/contacto" element={<Contact />} />
+        <Route path="/login" element={<Login />} />
+        <Route path="/*" element={<Error />} />
+      </Routes>
       {
         !isVisible &&
         <button className="cart_button" onClick={handleOpenCart}>
@@ -40,30 +49,5 @@ function App() {
     </div>
   );
 }
-//* Animaciones para las rutas
-const AnimatedRoutes = () => {
-  const location = useLocation();
 
-  return (
-    <TransitionGroup>
-      <CSSTransition
-        key={location.key}
-        timeout={300}
-        classNames="fade"
-      >
-        <div className="content">
-          <Routes location={location}>
-            <Route path="/" element={<Home />} />
-            <Route path="/categorias" element={<Categories />} />
-            <Route path="/categorias/:categoryId" element={<Products />} />
-            <Route path="/producto/:id" element={<ProductDetail />} />
-            <Route path="/contacto" element={<Contact />} />
-            <Route path="/login" element={<Login />} />
-            <Route path="/*" element={<Error />} />
-          </Routes>
-        </div>
-      </CSSTransition>
-    </TransitionGroup>
-  );
-};
 export default App;

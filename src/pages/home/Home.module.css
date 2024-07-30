@@ -13,9 +13,9 @@
     display: flex;
     flex-direction: column;
     justify-content: center;
-    padding: 0 180px;
     align-items: start;
     width: 100%;
+    max-width: 1440px;
 }
 
 .hero_banner_cont div .hero_text_span {
