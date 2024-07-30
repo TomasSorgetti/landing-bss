@@ -137,7 +137,8 @@ ser una url de la localización del archivo en el servidor.
 
 ## Diseño
 
-![HomePage](https://github.com/user-attachments/assets/21d4ed6d-3c68-4266-8860-137268e4f7b1)
+
+![home_page](https://github.com/user-attachments/assets/bfdb8cf8-7ffa-4ef1-b530-be4e0451cd26)
 
 
 
