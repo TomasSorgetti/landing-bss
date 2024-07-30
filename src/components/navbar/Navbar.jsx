@@ -4,6 +4,7 @@ import { useContext } from "react"
 import { cartContext } from "../../context/cart/CartContext"
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import { userContext } from "../../context/user/UserContext";
+import Button from "../button/Button";
 
 const Navbar = () => {
     const { handleOpenCart, getItemCount } = useContext(cartContext)
@@ -31,7 +32,7 @@ const Navbar = () => {
 
                 {
                     !isLogin &&
-                    <NavLink to="/login" className={styles.contact_button}>Login</NavLink>
+                    <Button label="login" url="/login" />
                 }
             </div>
         </nav>

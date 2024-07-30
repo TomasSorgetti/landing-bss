@@ -30,6 +30,7 @@
     font-size: 3.5rem;
     font-weight: 400;
     /* max-width: 800px; */
+    margin-bottom: 40px;
 }
 
 .hero_banner_cont div h1 .hero_title_span {
@@ -59,6 +60,118 @@
 .hero_button:focus {
     background-color: #e09b6a;
 }
+
+
+.cafe_vendidos_cont {
+    background-color: #140F0B;
+    display: flex;
+    justify-content: space-between;
+    max-width: 1440px;
+    margin: 0 auto;
+}
+
+.cafe_vendidos_cont div {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    padding: 100px 80px;
+    gap: 20px;
+    color: white;
+    width: 100%;
+}
+
+.cafe_vendidos_cont div span {
+    text-transform: uppercase;
+    letter-spacing: 8px;
+    font-weight: 600;
+    font-size: 1.125rem;
+    color: #E68541;
+}
+
+.cafe_vendidos_cont div h2 {
+    font-size: 2.375rem;
+}
+
+.cafe_vendidos_cont div p {
+    color: #C7C7C7;
+    font-size: 1.5rem;
+}
+
+.categories {
+    text-align: center;
+    margin: 160px auto;
+}
+
+.categories h2 {
+    font-size: 3rem;
+    color: #140F0B;
+    margin-bottom: 120px;
+}
+
+.categories ul {
+    display: flex;
+    max-width: 1180px;
+    margin: 0 auto;
+    justify-content: space-between;
+    gap: 40px;
+    list-style: none;
+}
+
+.categories ul li a {
+    width: 360px;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}
+
+.categories ul li h3 {
+    font-size: 2.6rem;
+    font-weight: 600;
+    color: white;
+}
+
+.category_bebidas {
+    background-image: url("../../assets/images/categories/bebidas.png");
+    background-size: cover;
+}
+
+.category_dulces {
+    background-image: url("../../assets/images/categories/dulces.png");
+    background-size: cover;
+}
+
+.category_postres {
+    background-image: url("../../assets/images/categories/postres.png");
+    background-size: cover;
+}
+
+.newsletter_cont {
+    max-width: 1180px;
+    margin: 180px auto;
+    display: flex;
+    justify-content: space-between;
+}
+
+.newsletter_cont h2 {
+    font-size: 3rem;
+    color: #140F0B;
+    margin-bottom: 40px;
+}
+
+.newsletter_cont p {
+    color: #140F0B;
+    font-size: 1.25rem;
+    max-width: 409px;
+    line-height: 2.5rem;
+}
+
+
+
 
 
 @media screen and (max-width: 1680px) {

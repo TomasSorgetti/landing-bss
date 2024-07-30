@@ -2,6 +2,7 @@ import { Component } from 'react';
 import styles from "./BestSellers.module.css"
 import { getBestSellersProducts } from '../../services/products/product.service';
 import ProductCards from '../product_cards/ProductCards';
+import { Link } from 'react-router-dom';
 
 class BestSellers extends Component {
     constructor(props) {
@@ -33,10 +34,9 @@ class BestSellers extends Component {
         return (
             <section className={styles.best_sellers_cont}>
                 <h2>Más vendidos</h2>
-                <ul>
-                    {this.state.loading && <li>Cargando...</li>}
-                    <ProductCards products={this.state.products} />
-                </ul>
+                {this.state.loading && <li>Cargando...</li>}
+                <ProductCards products={this.state.products} />
+                <Link to="/productos" className={styles.ver_button}>Ver todos</Link>
             </section>
         );
     }
