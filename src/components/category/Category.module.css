@@ -21,3 +21,10 @@
     background-color: rgba(0, 0, 0, 0.4);
     transition: 0.4s ease-in-out;
 }
+
+@media screen and (max-width: 1024px) {
+    .category {
+        width: 280px;
+        height: 280px;
+    }
+}

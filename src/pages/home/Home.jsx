@@ -15,7 +15,7 @@ class Home extends Component {
     render() {
         const categoriesList = [
             {
-                id: 1,
+                id: 2,
                 name: "bebidas",
                 image: {
                     url: bebidas,
@@ -23,7 +23,7 @@ class Home extends Component {
                 }
             },
             {
-                id: 2,
+                id: 3,
                 name: "dulces",
                 image: {
                     url: dulces,
@@ -31,7 +31,7 @@ class Home extends Component {
                 }
             },
             {
-                id: 3,
+                id: 4,
                 name: "postres",
                 image: {
                     url: postres,
@@ -39,14 +39,14 @@ class Home extends Component {
                 }
             },
         ]
-        
+
         return (
             <main>
                 <section className={styles.hero_banner_cont}>
                     <div>
                         <span className={styles.hero_text_span}>Café y repostería</span>
                         <h1>Moka <span className={styles.hero_title_span}>Coffe</span>, un rincón de <br /> tranquilidad y sabor en <br /> cada taza</h1>
-                        <Button label="comprar" url="/productos" />
+                        <Button label="comprar" url="/categorias" />
                     </div>
                 </section>
 
@@ -59,7 +59,7 @@ class Home extends Component {
                         <p>Prueba nuestros cafés más populares,
                             elegidos por su sabor único y calidad.
                             ¡Descubre tu favorito!</p>
-                        <Button label="comprar" url="/productos" />
+                        <Button label="comprar" url="/categorias" />
                     </div>
                     <img src={cafe_vendidos} alt="vasos de café apilados" />
                 </section>
@@ -68,7 +68,7 @@ class Home extends Component {
                     <h2>Categorías</h2>
                     <ul>
                         {categoriesList?.map(({ name, id, image }) => (
-                            <Category key={id} name={name} image={image} />
+                            <Category key={id} name={name} image={image} id={id} />
                         ))}
                     </ul>
                 </section>
@@ -81,7 +81,7 @@ class Home extends Component {
                         <p>Combina nuestro café con una tentadora
                             pastelería. La mezcla perfecta para un
                             momento de puro placer. ¡Disfrútalo!</p>
-                        <Button label="ver más" url="/productos" />
+                        <Button label="ver más" url="/categorias" />
                     </div>
                 </section>
 

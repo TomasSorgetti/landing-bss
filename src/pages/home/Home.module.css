@@ -157,10 +157,6 @@
     .hero_banner_cont {
         height: 840px;
     }
-
-    .hero_banner_cont div {
-        padding: 0 160px;
-    }
 }
 
 @media screen and (max-width: 1440px) {
@@ -169,7 +165,7 @@
     }
 
     .hero_banner_cont div {
-        padding: 0 120px;
+        max-width: 1180px;
     }
 }
 
@@ -191,6 +187,10 @@
         padding: 12px 24px;
         font-size: 1.5rem;
     }
+
+    .cafe_vendidos_cont img {
+        height: 560px;
+    }
 }
 
 @media screen and (max-width: 1024px) {
@@ -207,13 +207,57 @@
     }
 
     .hero_banner_cont div {
-        padding: 0 80px;
+        max-width: 920px;
     }
 
     .hero_button {
         margin-top: 20px;
         padding: 12px 24px;
         font-size: 1.3rem;
+    }
+
+    .cafe_vendidos_cont img {
+        height: 460px;
+    }
+
+    .cafe_vendidos_cont div {
+        padding: 32px;
+    }
+
+    .cafe_vendidos_cont div h2 {
+        font-size: 2rem;
+        
+    }
+
+    .cafe_vendidos_cont div span {
+        font-size: 0.9rem;
+    }
+
+    .cafe_vendidos_cont div p {
+        font-size: 1.1rem;
+        margin-bottom: 40px;
+        margin-top: 20px;
+    }
+
+    .categories ul {
+        max-width: 920px;
+    }
+
+    .categories ul li a {
+        width: 280px;
+        height: 280px;
+    }
+
+    .newsletter_cont {
+        max-width: 920px;
+    }
+
+    .newsletter_cont h2 {
+        font-size: 2.5rem;
+    }
+
+    .newsletter_cont p {
+        font-size: 1.1rem;
     }
 }
 
@@ -227,7 +271,7 @@
     }
 
     .hero_banner_cont div {
-        padding: 0 40px;
+        max-width: 640px;
     }
 
     .hero_button {
@@ -243,5 +287,35 @@
 
     .cafe_vendidos_cont {
         flex-direction: column;
+    }
+
+    .cafe_vendidos_cont img {
+        width: 100%;
+        height: auto;
+    }
+
+    .cafe_vendidos_cont div {
+        padding: 80px 64px;
+    }
+
+    .newsletter_cont {
+        max-width: 640px;
+        flex-direction: column;
+        gap: 40px;
+        align-items: center;
+        text-align: center;
+    }
+
+    .newsletter_cont div {
+        display: flex;
+        flex-direction: column;
+        align-items: center;
+    }
+
+}
+
+@media screen and (max-width: 640px) {
+    .hero_banner_cont div {
+        max-width: 560px;
     }
 }

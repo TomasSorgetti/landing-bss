@@ -36,7 +36,7 @@ class BestSellers extends Component {
                 <h2>Más vendidos</h2>
                 {this.state.loading && <li>Cargando...</li>}
                 <ProductCards products={this.state.products} />
-                <Link to="/productos" className={styles.ver_button}>Ver todos</Link>
+                <Link to="/categorias/1" className={styles.ver_button}>Ver todos</Link>
             </section>
         );
     }

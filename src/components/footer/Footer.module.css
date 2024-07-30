@@ -23,9 +23,9 @@ footer {
 .footer_wrapper {
     display: flex;
     justify-content: space-between;
-    margin: 0 auto;
-    max-width: 1680px;
+    max-width: 1440px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .contact_info {
@@ -33,4 +33,27 @@ footer {
     flex-direction: column;
     gap: 24px;
     text-align: left;
+}
+
+@media screen and (max-width: 1440px) {
+    .footer_wrapper {
+        max-width: 1180px;
+    }
+}
+
+@media screen and (max-width: 1024px) {
+    .footer_wrapper {
+        max-width: 920px;
+    }
+}
+
+@media screen and (max-width: 768px) {
+    .footer_wrapper {
+        max-width: 640px;
+    }
+}
+@media screen and (max-width: 640px) {
+    .footer_wrapper {
+        max-width: 560px;
+    }
 }

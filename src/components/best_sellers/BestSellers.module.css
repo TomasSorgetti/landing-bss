@@ -4,8 +4,8 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    padding: 0 120px;
     width: 100%;
+    margin: 0 auto;
 }
 
 .best_sellers_cont h2 {
@@ -30,4 +30,15 @@
     background-color: #140F0B;
     color: white;
     transition: 0.4s ease-in-out;
+}
+
+@media screen and (max-width: 1024px) {
+    .best_sellers_cont h2 {
+        margin-bottom: 20px;
+    }
+
+    .ver_button {
+        margin-top: 24px;
+        margin-bottom: 100px;
+    }
 }

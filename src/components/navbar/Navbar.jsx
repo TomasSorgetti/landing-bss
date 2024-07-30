@@ -46,9 +46,7 @@ const Navbar = () => {
                         }} className={styles.logout_button}>Logout</button>
                     }
                     {
-                        !openNav &&
-
-                        <button className={styles.cart_button} onClick={handleOpenCart}>
+                        <button className={`${styles.cart_button} ${styles.desktop_cart}`} onClick={handleOpenCart}>
                             <HiOutlineShoppingCart className={styles.cart_icon} />
                             <div>
                                 <span>{getItemCount()}</span>

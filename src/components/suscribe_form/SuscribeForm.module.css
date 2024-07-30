@@ -34,3 +34,14 @@
 .suscribe_form button:active {
     background-color: #080605;
 }
+
+@media screen and (max-width: 1024px) {
+    .suscribe_form {
+        max-width: 380px;
+    }
+
+    .suscribe_form input,
+    .suscribe_form button {
+        height: 60px;
+    }
+}

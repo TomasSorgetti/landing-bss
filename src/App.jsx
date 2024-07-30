@@ -13,7 +13,6 @@ import { cartContext } from "./hooks/cart/CartContext";
 import { HiOutlineShoppingCart } from "react-icons/hi";
 import Login from "./pages/login/Login";
 import React, { useContext } from "react";
-import "./App.css";
 import ScrollToTop from "./helpers/scrollToTop";
 
 

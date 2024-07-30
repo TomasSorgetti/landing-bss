@@ -71,3 +71,9 @@ body {
   font-size: 0.8rem;
   font-weight: 700;
 }
+
+@media screen and (max-width: 768px) {
+  .cart_button {
+    display: none;
+  }
+}

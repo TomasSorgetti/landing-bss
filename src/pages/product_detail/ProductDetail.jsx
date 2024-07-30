@@ -37,6 +37,7 @@ const ProductDetail = () => {
 
   const handleClick = () => {
     addToCart(product.id, count)
+    setCount(1)
     handleOpenCart()
   }
 
