@@ -3,9 +3,9 @@ import styles from "./Button.module.css"
 
 
 
-const Button = ({ label, url }) => {
+const Button = ({ label, url, handleClick }) => {
     return (
-        <Link to={url} className={styles.button}>
+        <Link onClick={handleClick} to={url} className={styles.button}>
             {label}
         </Link>
     )

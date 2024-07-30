@@ -29,8 +29,10 @@ const Cart = () => {
     }
     //* Esta funcion y useEffect es para poder cerrar el carrito clickeando fuera
     const handleClickOutside = (event) => {
-        const condition = cartRef.current && !cartRef.current.contains(event.target) && !event.target.classList.contains('cancelClose')
-        if (condition) {
+        // Verifica si el clic es fuera del contenedor del carrito y no está en un botón que debería mantener el carrito abierto
+        if (cartRef.current && !cartRef.current.contains(event.target) &&
+            !event.target.classList.contains('cancelClose') &&
+            event.target.classList.contains('nav_cart')) {
             handleCloseCart();
         }
     };
