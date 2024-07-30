@@ -66,8 +66,9 @@
 .contact_form ul li textarea {
     width: 100%;
     padding: 12px;
-    border-bottom: 1px solid rgb(190, 190, 190);
+    border: 1px solid rgb(190, 190, 190);
     border-radius: 6px;
+
 }
 
 .contact_form ul li input {
@@ -77,4 +78,30 @@
 .contact_form ul li textarea {
     resize: none;
     height: 200px;
+}
+
+.contact_form .button_cont {
+    align-items: center;
+    width: 100%;
+}
+
+.contact_form button {
+    border: 2px solid #140F0B;
+    background-color: white;
+    color: #140F0B;
+    font-weight: 600;
+    padding: 16px 40px;
+    font-size: 1.2rem;
+    border-radius: 6px;
+    cursor: pointer;
+}
+
+.contact_form button:hover {
+    background-color: #140F0B;
+    color: white;
+    transition: 0.4s ease-in-out;
+}
+
+.error {
+    color: red;
 }

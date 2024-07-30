@@ -48,7 +48,7 @@ class Contact extends Component {
     handleSubmit = async (e) => {
         e.preventDefault();
         this.setState({ touched: { name: true, email: true, message: true } });
-
+        if (!this.state.email || !this.state.name || !this.state.message) return
         const { isValid, errors } = validateContact(this.state);
         if (!isValid) {
             this.setState({ errors });
@@ -109,10 +109,11 @@ class Contact extends Component {
                                     type="text"
                                     name="name"
                                     id="name"
+                                    placeholder='Ej. Juan Perez'
                                     value={name}
                                     onChange={this.handleChange}
                                 />
-                                {touched.name && errors.name && <span>{errors.name}</span>}
+                                {touched.name && errors.name && <span className={styles.error}>{errors.name}</span>}
                             </li>
                             <li>
                                 <label htmlFor="email">Email</label>
@@ -120,10 +121,11 @@ class Contact extends Component {
                                     type="email"
                                     name="email"
                                     id="email"
+                                    placeholder='Ej. juanperez@example.com'
                                     value={email}
                                     onChange={this.handleChange}
                                 />
-                                {touched.email && errors.email && <span>{errors.email}</span>}
+                                {touched.email && errors.email && <span className={styles.error}>{errors.email}</span>}
                             </li>
                             <li>
                                 <label htmlFor="message">Mensaje</label>
@@ -131,12 +133,13 @@ class Contact extends Component {
                                     type="text"
                                     name="message"
                                     id="message"
+                                    placeholder='Escribe tu mensaje...'
                                     value={message}
                                     onChange={this.handleChange}
                                 />
-                                {touched.message && errors.message && <span>{errors.message}</span>}
+                                {touched.message && errors.message && <span className={styles.error}>{errors.message}</span>}
                             </li>
-                            <li>
+                            <li className={styles.button_cont}>
                                 <button type="submit" disabled={loading}>
                                     {loading ? 'Enviando...' : 'Enviar'}
                                 </button>
