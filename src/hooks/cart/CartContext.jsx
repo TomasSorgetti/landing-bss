@@ -31,11 +31,19 @@ const CartContextProvider = (props) => {
         }
         return count
     }
-    const addToCart = (itemId) => {
-        setItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
+    const addToCart = (itemId, count) => {
+        if (count && count > 0) {
+            setItems((prev) => ({ ...prev, [itemId]: prev[itemId] + count }))
+        }
+        else {
+            setItems((prev) => ({ ...prev, [itemId]: prev[itemId] + 1 }))
+        }
     }
     const removeFromCart = (itemId) => {
         setItems((prev) => ({ ...prev, [itemId]: prev[itemId] - 1 }))
+    }
+    const deleteFromCart = (itemId) => {
+        setItems((prev) => ({ ...prev, [itemId]: prev[itemId] - prev[itemId] }))
     }
     const updateCartItemCount = (value, itemId) => {
         setItems((prev) => ({ ...prev, [itemId]: value }))
@@ -52,7 +60,7 @@ const CartContextProvider = (props) => {
 
 
 
-    const contextValue = { items, getItemCount, addToCart, removeFromCart, updateCartItemCount, getTotalCartAmount, handleOpenCart, handleCloseCart, isVisible, emptyCart }
+    const contextValue = { items, getItemCount, addToCart, removeFromCart, deleteFromCart, updateCartItemCount, getTotalCartAmount, handleOpenCart, handleCloseCart, isVisible, emptyCart }
 
     return (
         <cartContext.Provider value={contextValue}>

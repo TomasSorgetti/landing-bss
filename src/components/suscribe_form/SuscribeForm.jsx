@@ -22,7 +22,7 @@ const SuscribeForm = () => {
     }
     return (
         <form onSubmit={handleSend} className={styles.suscribe_form}>
-            <input type="email" name="email" placeholder="Email" />
+            <input type="email" name="email" placeholder="juanperez@gmail.com" />
             <button type="submit">
                 {loading ? "Enviando..." : "Suscribirse"}
             </button>

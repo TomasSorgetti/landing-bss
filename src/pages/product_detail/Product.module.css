@@ -47,7 +47,7 @@
     font-weight: 400;
 }
 
-.product_info button {
+.buy_button {
     background-color: #E68541;
     color: #140F0B;
     border: none;
@@ -55,4 +55,29 @@
     border-radius: 6px;
     font-size: 1.5rem;
     cursor: pointer;
+}
+
+
+
+.cart_item_count {
+    display: flex;
+    align-items: center;
+    justify-content: start;
+    height: 26px;
+}
+
+.cart_item_count input {
+    width: 80px;
+    text-align: center;
+    margin: 0 10px;
+    height: 100%;
+}
+
+.cart_item_count button {
+    background-color: #E68541;
+    border: none;
+    cursor: pointer;
+    font-size: 1.5rem;
+    height: 100%;
+    width: 26px;
 }

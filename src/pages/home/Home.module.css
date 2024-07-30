@@ -129,31 +129,6 @@
     text-decoration: none;
 }
 
-.categories ul li a:hover {
-    background-color: rgba(0, 0, 0, 0.4);
-    transition: 0.4s ease;
-}
-
-.categories ul li h3 {
-    font-size: 2.6rem;
-    font-weight: 600;
-    color: white;
-}
-
-.category_bebidas {
-    background-image: url("../../assets/images/categories/bebidas.png");
-    background-size: cover;
-}
-
-.category_dulces {
-    background-image: url("../../assets/images/categories/dulces.png");
-    background-size: cover;
-}
-
-.category_postres {
-    background-image: url("../../assets/images/categories/postres.png");
-    background-size: cover;
-}
 
 .newsletter_cont {
     max-width: 1180px;

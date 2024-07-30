@@ -4,7 +4,6 @@
     background-color: bisque;
     position: relative;
     cursor: pointer;
-    margin-bottom: 40px;
 }
 
 .product_card:hover {

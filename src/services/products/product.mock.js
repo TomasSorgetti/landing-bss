@@ -10,7 +10,7 @@ export const products = [
             name: "Café con leche",
             price: 100,
             description:"descripcion de prueba",
-            category: [1],
+            category: [2],
             isBestSeller: true,
             image:{
                 url: coffee,
@@ -22,7 +22,7 @@ export const products = [
             name: "Café con crema",
             price: 150,
             description:"descripcion de prueba",
-            category: [1],
+            category: [2],
             image:{
                 url: coffee,
                 alt:"café con crema"
@@ -33,7 +33,7 @@ export const products = [
             name: "Café con leche y crema",
             price: 200,
             description:"descripcion de prueba",
-            category: [1],            
+            category: [2],            
             image:{
                 url: coffee,
                 alt:"café con leche y crema"
@@ -44,7 +44,7 @@ export const products = [
             name: "Medialunas",
             price: 250,
             description:"descripcion de prueba",
-            category: [2],
+            category: [4],
             isBestSeller: true,
             image:{
                 url: medialunas,
@@ -56,7 +56,7 @@ export const products = [
             name: "Medialunas rellenas",
             price: 250,
             description:"descripcion de prueba",
-            category: [2],
+            category: [4],
             isBestSeller: true,
             image:{
                 url: medialunas_rellenas,
@@ -68,7 +68,7 @@ export const products = [
             name: "Alfajores de maicena",
             price: 250,
             description:"descripcion de prueba",
-            category: [2],            
+            category: [3],            
             image:{
                 url: alfajor,
                 alt:"Alfajores de maicena"

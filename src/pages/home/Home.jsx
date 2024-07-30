@@ -4,11 +4,42 @@ import BestSellers from "../../components/best_sellers/BestSellers"
 import cafe_vendidos from "../../assets/images/cafes_mas_vendidos.png"
 import cafe_galleta from "../../assets/images/cafe_galletita.png"
 import Button from '../../components/button/Button';
-import { Link } from 'react-router-dom';
 import SuscribeForm from '../../components/suscribe_form/SuscribeForm';
+import Category from '../../components/category/Category';
+
+import bebidas from "../../assets/images/categories/bebidas.png"
+import dulces from "../../assets/images/categories/dulces.png"
+import postres from "../../assets/images/categories/postres.png"
 
 class Home extends Component {
     render() {
+        const categoriesList = [
+            {
+                id: 1,
+                name: "bebidas",
+                image: {
+                    url: bebidas,
+                    alt: "categoría de prueba",
+                }
+            },
+            {
+                id: 2,
+                name: "dulces",
+                image: {
+                    url: dulces,
+                    alt: "categoría de prueba",
+                }
+            },
+            {
+                id: 3,
+                name: "postres",
+                image: {
+                    url: postres,
+                    alt: "categoría de prueba",
+                }
+            },
+        ]
+        
         return (
             <main>
                 <section className={styles.hero_banner_cont}>
@@ -32,25 +63,13 @@ class Home extends Component {
                     </div>
                     <img src={cafe_vendidos} alt="vasos de café apilados" />
                 </section>
-                
+
                 <section className={styles.categories}>
                     <h2>Categorías</h2>
                     <ul>
-                        <li className={styles.category_bebidas}>
-                            <Link to="/productos">
-                                <h3>Bebidas</h3>
-                            </Link>
-                        </li>
-                        <li className={styles.category_dulces}>
-                            <Link to="/productos">
-                                <h3>Dulces</h3>
-                            </Link>
-                        </li>
-                        <li className={styles.category_postres}>
-                            <Link to="/productos">
-                                <h3>Postres</h3>
-                            </Link>
-                        </li>
+                        {categoriesList?.map(({ name, id, image }) => (
+                            <Category key={id} name={name} image={image} />
+                        ))}
                     </ul>
                 </section>
 

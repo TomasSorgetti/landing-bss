@@ -1,10 +1,10 @@
 import { useContext } from "react"
-import { cartContext } from "../../context/cart/CartContext"
+import { cartContext } from "../../hooks/cart/CartContext"
 import styles from "./CartItem.module.css"
 
 
 const CartItem = ({ data }) => {
-    const { addToCart, removeFromCart, items, updateCartItemCount } = useContext(cartContext)
+    const { addToCart, removeFromCart, deleteFromCart, items, updateCartItemCount } = useContext(cartContext)
     const { name, price, image } = data
     return (
         <li className={styles.cart_item}>
@@ -17,6 +17,8 @@ const CartItem = ({ data }) => {
                     <input value={items[data.id]} onChange={(e) => updateCartItemCount(Number(e.target.value), data.id)} />
                     <button onClick={() => addToCart(data.id)}>+</button>
                 </div>
+
+                <button className={styles.remove_button} onClick={() => deleteFromCart(data.id)}>Eliminar</button>
             </div>
 
         </li>

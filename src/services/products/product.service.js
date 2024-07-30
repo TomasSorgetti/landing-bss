@@ -8,6 +8,21 @@ export const getAllProducts = () => {
         }, 600);
     })
 }
+export const getAllProductsByCategory = (categoryId) => {
+    
+    return new Promise((resolve) => {
+        setTimeout(() => {
+            if (categoryId === 1) resolve(products)
+            else {
+                const productList = products.filter((prod) => prod.category.includes(categoryId))
+                if (!productList.length) resolve(products)      
+                else {
+                    resolve(productList)
+                }
+            }
+        },600)
+    })
+}
 
 export const getProductById = (id) => { 
     return new Promise ((resolve)=> {

@@ -1,18 +1,18 @@
 import styles from "./Products.module.css"
 import { Component } from 'react';
-import { getAllProducts, getProductsFiltered } from '../../services/products/product.service';
+import { getAllProducts, getAllProductsByCategory, getProductsFiltered } from '../../services/products/product.service';
 import { getAllCategories } from "../../services/categories/categories.service";
 import ProductCards from "../../components/product_cards/ProductCards";
+import RouteParamsProvider from "../../hooks/params/Params";
+import { Link } from "react-router-dom";
 
-class Products extends Component {
+class ProductsWithoutParams extends Component {
     constructor(props) {
         super(props);
         this.state = {
             products: [],
             categories: [],
             loading: false,
-            search: '',
-            category: 0,
         };
     }
     componentDidMount() {
@@ -20,16 +20,18 @@ class Products extends Component {
             loading: true
         })
         try {
-            const getData = async () => {
-                const categoryList = await getAllCategories()
-                const productsList = await getAllProducts()
-                this.setState({
-                    products: productsList,
-                    categories: categoryList,
-                    loading: false,
-                })
+            if (this.props.params.categoryId) {
+                const getData = async () => {
+                    const productsList = await getAllProductsByCategory(Number(this.props.params.categoryId))
+                    const categoriesList = await getAllCategories()
+                    this.setState({
+                        products: productsList,
+                        categories: categoriesList,
+                        loading: false,
+                    })
+                }
+                getData()
             }
-            getData()
         } catch (error) {
             console.log(error);
             this.setState({
@@ -38,29 +40,35 @@ class Products extends Component {
         }
     }
 
-    searchProducts = async () => {
-        this.setState({ loading: true });
-        try {
-            const products = await getProductsFiltered(this.state.search, this.state.category);
+    componentDidUpdate(prevProps) {
+        if (prevProps.params.categoryId !== this.props.params.categoryId) {
             this.setState({
-                products: products,
-                loading: false,
-            });
-        } catch (error) {
-            console.log(error);
-            this.setState({ loading: false });
+                loading: true
+            })
+            try {
+                if (this.props.params.categoryId) {
+                    const getData = async () => {
+                        const productsList = await getAllProductsByCategory(Number(this.props.params.categoryId))
+                        this.setState({
+                            products: productsList,
+                            loading: false,
+                        })
+                    }
+                    getData()
+                }
+            } catch (error) {
+                console.log(error);
+                this.setState({
+                    loading: false,
+                });
+            }
         }
     }
-    handleNameChange = (event) => {
-        this.setState({ search: event.target.value }, this.searchProducts);
-    };
-    handleCategoryChange = (event) => {
-        this.setState({ category: Number(event.target.value) }, this.searchProducts);
-    };
 
     render() {
+
         return (
-            <main>
+            <main className={styles.products_cont}>
                 <section className={styles.hero_banner}>
                     <div className={styles.wrapper}>
                         <h1>Descubre lo mejor de Moka
@@ -70,18 +78,16 @@ class Products extends Component {
                 </section>
                 <section className={styles.products}>
                     <h2>Nuestros productos</h2>
-                    <div className={styles.filter_cont}>
-                        <input type="text" name="search" onChange={this.handleNameChange} placeholder="Buscar" />
-                        <div className={styles.category_cont}>
-                            <label htmlFor="category">Categoría:</label>
-                            <select id="category" name="category" onChange={this.handleCategoryChange}>
-                                <option value={0}>Todos</option>
-                                {this.state.categories?.map(({ name, id }) => (
-                                    <option key={id} value={id}>{name}</option>
-                                ))}
-                            </select>
-                        </div>
-                    </div>
+                    <aside className={styles.categories_cont}>
+                        <h2>Categorías</h2>
+                        <ul>
+                            {this.state.categories?.map(({ name, id }) => (
+                                <li key={id}>
+                                    <Link className={(id == this.props.params.categoryId) ? styles.active_option : ""} to={`/categorias/${id}`}>{name}</Link>
+                                </li>
+                            ))}
+                        </ul>
+                    </aside>
                     {this.state.loading
                         ?
                         <div className={styles.loading_cont}><span>Cargando...</span></div>
@@ -93,5 +99,9 @@ class Products extends Component {
         );
     }
 }
-
-export default Products;
+const Products = () => (
+    <RouteParamsProvider>
+        <ProductsWithoutParams />
+    </RouteParamsProvider>
+);
+export default Products

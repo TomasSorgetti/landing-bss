@@ -1,9 +1,9 @@
 import styles from "./Cart.module.css"
 import { useContext, useEffect, useRef, useState } from "react"
 import { products } from "../../services/products/product.mock"
-import { cartContext } from "../../context/cart/CartContext"
+import { cartContext } from "../../hooks/cart/CartContext"
 import CartItem from "../cart_item/CartItem"
-import { userContext } from "../../context/user/UserContext"
+import { userContext } from "../../hooks/user/UserContext"
 import { useNavigate } from "react-router-dom"
 
 
@@ -29,7 +29,7 @@ const Cart = () => {
     }
     //* Esta funcion y useEffect es para poder cerrar el carrito clickeando fuera
     const handleClickOutside = (event) => {
-        const condition = cartRef.current && !cartRef.current.contains(event.target) && !event.target.classList.contains('buy')
+        const condition = cartRef.current && !cartRef.current.contains(event.target) && !event.target.classList.contains('cancelClose')
         if (condition) {
             handleCloseCart();
         }

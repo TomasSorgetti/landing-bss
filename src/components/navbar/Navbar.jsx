@@ -1,9 +1,9 @@
 import { Link, NavLink } from "react-router-dom"
 import styles from "./Navbar.module.css"
 import { useContext } from "react"
-import { cartContext } from "../../context/cart/CartContext"
+import { cartContext } from "../../hooks/cart/CartContext"
 import { HiOutlineShoppingCart } from "react-icons/hi";
-import { userContext } from "../../context/user/UserContext";
+import { userContext } from "../../hooks/user/UserContext";
 import Button from "../button/Button";
 
 const Navbar = () => {
@@ -16,7 +16,7 @@ const Navbar = () => {
             <Link className={styles.logo} to="/">Moka <span>Coffee</span></Link>
             <div className={styles.nav_links_container}>
                 <NavLink to="/" className={({ isActive }) => isActive ? styles.active_option : ""}>Inicio</NavLink>
-                <NavLink to="/productos" className={({ isActive }) => isActive ? styles.active_option : ""}>Productos</NavLink>
+                <NavLink to="/categorias" className={({ isActive }) => isActive ? styles.active_option : ""}>Productos</NavLink>
                 <NavLink to="/contacto" className={({ isActive }) => isActive ? styles.active_option : ""}>Contacto</NavLink>
 
                 {

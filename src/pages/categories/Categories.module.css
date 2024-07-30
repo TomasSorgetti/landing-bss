@@ -1,0 +1,64 @@
+.hero_banner {
+    background-image: url("../../assets/images/products_hero_bg.png");
+    background-repeat: no-repeat;
+    background-size: cover;
+    height: 660px;
+    color: white;
+}
+
+.wrapper {
+    width: 100%;
+    max-width: 1440px;
+    margin: 0 auto;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: start;
+    gap: 40px;
+}
+
+.wrapper h1 {
+    font-size: 3.5rem;
+    max-width: 760px;
+    font-weight: 400;
+}
+
+.wrapper h1 span {
+    color: #E68541;
+    font-weight: 700;
+}
+
+.wrapper p {
+    max-width: 600px;
+    font-size: 1.5rem;
+}
+
+.categories_cont h2 {
+    text-align: center;
+    font-size: 3rem;
+    margin: 120px 0;
+    color: #140F0B;
+}
+
+.categories_cont ul {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    max-width: 1180px;
+    width: 100%;
+    margin: 0 auto;
+    list-style: none;
+    margin-bottom: 100px;
+}
+
+.categories_cont ul li a {
+    width: 360px;
+    height: 360px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: white;
+    cursor: pointer;
+    text-decoration: none;
+}

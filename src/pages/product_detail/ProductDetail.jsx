@@ -2,7 +2,7 @@ import { useParams } from "react-router-dom"
 import styles from "./Product.module.css"
 import { useContext, useEffect, useState } from "react"
 import { getProductById } from "../../services/products/product.service"
-import { cartContext } from "../../context/cart/CartContext"
+import { cartContext } from "../../hooks/cart/CartContext"
 
 
 
@@ -10,6 +10,7 @@ const ProductDetail = () => {
   const { id } = useParams()
   const [product, setProduct] = useState({})
   const [loading, setLoading] = useState(false)
+  const [count, setCount] = useState(1)
 
   const { addToCart, handleOpenCart } = useContext(cartContext)
 
@@ -35,7 +36,7 @@ const ProductDetail = () => {
   }, [])
 
   const handleClick = () => {
-    addToCart(product.id)
+    addToCart(product.id, count)
     handleOpenCart()
   }
 
@@ -55,7 +56,12 @@ const ProductDetail = () => {
               <h2>{product.name}</h2>
               <p>{product.description}</p>
               <span className={styles.price}>$ {product.price}</span>
-              <button className="buy" onClick={handleClick}>Comprar</button>
+              <div className={styles.cart_item_count}>
+                <button className="cancelClose" onClick={() => { count > 1 && setCount(count - 1) }}>-</button>
+                <input value={count} onChange={e => setCount(Number(e.target.value))} />
+                <button className="cancelClose" onClick={() => setCount(count + 1)}>+</button>
+              </div>
+              <button className={`cancelClose ${styles.buy_button}`} onClick={handleClick}>Comprar</button>
             </div>
 
           </article>
