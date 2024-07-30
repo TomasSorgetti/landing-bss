@@ -47,22 +47,35 @@
     border: 2px solid #E68541;
     border-radius: 8px;
     font-size: 1.3rem;
+    font-weight: 400;
     margin-top: 12px;
     margin-right: 24px;
     cursor: pointer;
 }
 
-.buy_button {
+.ver_button:hover {
     background-color: #E68541;
-    border: 2px solid #E68541;
+    color: #140F0B;
+    transition: 0.6s ease;
+}
+
+.buy_button {
+    background-color: #ffffff;
+    border: 2px solid #140F0B;
     color: #140F0B;
     padding: 12px 18px;
     border-radius: 8px;
     font-size: 1.3rem;
+    font-weight: 600;
     margin-top: 12px;
     cursor: pointer;
 }
 
+.buy_button:hover {
+    background-color: #140F0B;
+    color: #ffffff;
+    transition: 0.6s ease;
+}
 
 .best_seller {
     position: absolute;
