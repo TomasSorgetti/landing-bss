@@ -235,4 +235,13 @@
         padding: 12px 24px;
         font-size: 1.1rem;
     }
+
+    .categories ul {
+        flex-direction: column;
+        align-items: center;
+    }
+
+    .cafe_vendidos_cont {
+        flex-direction: column;
+    }
 }

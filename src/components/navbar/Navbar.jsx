@@ -19,15 +19,13 @@ const Navbar = () => {
         <nav className={`${styles.navbar} ${openNav ? (styles.active_nav) : ""}`}>
             <Link className={styles.logo} to="/">Moka <span>Coffee</span></Link>
             <div className={styles.mobile_nav_cont}>
-                {
-                    !openNav &&
-                    <button className={`${styles.cart_button} nav_cart`} onClick={handleChangeCart}>
-                        <HiOutlineShoppingCart className={styles.cart_icon} />
-                        <div>
-                            <span>{getItemCount()}</span>
-                        </div>
-                    </button>
-                }
+                <button className={`${styles.cart_button} ${styles.mobile_cart} nav_cart`} onClick={handleChangeCart}>
+                    <HiOutlineShoppingCart className={styles.cart_icon} />
+                    <div>
+                        <span>{getItemCount()}</span>
+                    </div>
+                </button>
+
                 <div onClick={handleChangeNav} className={`${styles.hamburger_button} ${openNav ? (styles.active) : ""}`}>
                     <span></span>
                     <span></span>

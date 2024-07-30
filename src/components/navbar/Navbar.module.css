@@ -138,6 +138,11 @@
     align-items: center;
 }
 
+.mobile_cart {
+    opacity: 0;
+    visibility: hidden;
+}
+
 @media screen and (max-width: 1680px) {
     .navbar {
         padding: 16px 160px;
@@ -192,6 +197,11 @@
         transform: translateX(0);
         opacity: 1;
         transition: 0.6s ease-in-out;
+    }
+
+    .mobile_cart {
+        opacity: 1;
+        visibility: visible;
     }
 }
 

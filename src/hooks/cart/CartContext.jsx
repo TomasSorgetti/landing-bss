@@ -61,7 +61,6 @@ const CartContextProvider = (props) => {
         setIsVisible(!isVisible);
     };
 
-    console.log(isVisible);
 
     const contextValue = { items, getItemCount, addToCart, removeFromCart, deleteFromCart, updateCartItemCount, getTotalCartAmount, handleOpenCart, handleChangeCart, handleCloseCart, isVisible, emptyCart }
 

@@ -31,7 +31,7 @@ const Cart = () => {
     const handleClickOutside = (event) => {
         // Verifica si el clic es fuera del contenedor del carrito y no está en un botón que debería mantener el carrito abierto
         if (cartRef.current && !cartRef.current.contains(event.target) &&
-            !event.target.classList.contains('cancelClose') &&
+            !event.target.classList.contains('cancelClose') ||
             event.target.classList.contains('nav_cart')) {
             handleCloseCart();
         }
@@ -47,6 +47,7 @@ const Cart = () => {
     return (
 
         <div ref={cartRef} className={`${styles.cart} ${isVisible ? styles.show : styles.hide}`}>
+            <button onClick={handleCloseCart} className={styles.closeCart}>X</button>
             <span className={styles.cart_title}>Carrito de compras</span>
             <ul>
                 {products?.map((product) => {
