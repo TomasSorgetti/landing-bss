@@ -52,7 +52,7 @@ class Home extends Component {
 
                 <BestSellers />
 
-                <section className={styles.cafe_vendidos_cont}>
+                <section id='mas_vendidos' className={styles.cafe_vendidos_cont}>
                     <div>
                         <span>Café y patisserie</span>
                         <h2>Los cafés más vendidos</h2>
