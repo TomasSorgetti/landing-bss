@@ -129,6 +129,9 @@
 }
 
 @media screen and (max-width: 768px) {
+    .product_card:hover {
+        transform: none;
+    }
 
     .product_card,
     .product_card img {

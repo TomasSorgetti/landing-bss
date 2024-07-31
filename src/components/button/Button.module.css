@@ -18,3 +18,9 @@
 .button:focus {
     background-color: #e09b6a;
 }
+
+@media screen and (max-width: 768px) {
+    .button {
+        padding: 12px 24px;
+    }
+}
