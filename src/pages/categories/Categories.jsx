@@ -36,12 +36,10 @@ class Categories extends Component {
             <main className={styles.categories_cont}>
                 <section className={styles.hero_banner}>
                     <div className={styles.wrapper}>
-                        <h1>Descubre lo mejor de Moka
-                            <span>Coffee</span></h1>
-                        <p>Una experiencia única con nuestra selección exclusiva de café y bocadillos.</p>
+                        <h1>Categorías de <span>Productos</span></h1>
+                        <p>Encontrá rápidamente lo que buscas entre nuestras categorías, desde cafés frescos hasta deliciosos pasteles.</p>
                     </div>
                 </section>
-                <h2>Categorías</h2>
                 <ul>
                     {this.state.loading
                         ?
