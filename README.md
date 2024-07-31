@@ -1,6 +1,6 @@
 # Desafío técnico React para Boost Software Studio
 
-## Deploy: [Proyecto react shop]("reactshop.tomassorgetti.com.ar")
+## Deploy: [Proyecto react shop]("mokacoffee.tomassorgetti.com.ar")
 
 
 ## Como Iniciar
@@ -134,6 +134,7 @@ ser una url de la localización del archivo en el servidor.
     name: "admin",
     email: "admin@mail.com",
     password: "admin123",
+    isAdmin: true
 },  
 ```
 
@@ -141,45 +142,23 @@ ser una url de la localización del archivo en el servidor.
 ## Diseño
 
 ### Home Page
-![home_page](https://github.com/user-attachments/assets/bfdb8cf8-7ffa-4ef1-b530-be4e0451cd26)
+![home_page](https://github.com/user-attachments/assets/74d26d92-365d-4684-9f89-0032a7657000)
 
 ### Categories Page
-![categorias_page](https://github.com/user-attachments/assets/c4d6b5c6-eb5e-4384-b079-2f6a2e15688b)
+![categorias_page](https://github.com/user-attachments/assets/b30f34fd-ccc1-4ecd-abed-868247e31fd3)
 
 ### Products Page
-![productos_page](https://github.com/user-attachments/assets/899f7c63-7016-4b2e-9461-6c1045c728be)
+![products_page](https://github.com/user-attachments/assets/0aba8f2d-fa90-4cd6-bf99-2d03296d6712)
 
 ### Contact Page
-![contact_page](https://github.com/user-attachments/assets/2ed884f8-8e25-472a-892d-7d954fda15d4)
+![contact_page](https://github.com/user-attachments/assets/d4511fd1-069c-4d30-ac67-67c78acbe345)
 
 ### Login Page
-![login_page](https://github.com/user-attachments/assets/59862e66-8b8c-4c0f-b2f0-34fdfd6c23e0)
+![login_page](https://github.com/user-attachments/assets/ed9aa706-afec-450f-a6d7-e1d72930ec37)
 
 ### Product Detail Page
-![detalle_producto](https://github.com/user-attachments/assets/bbee7dae-edfe-4ede-91d3-35f99bcdd68d)
+![product_detail_page](https://github.com/user-attachments/assets/e14f9c88-163f-4db5-ad87-7006eaf0ee02)
 
+### Error Page
+![error_page](https://github.com/user-attachments/assets/188c6406-6ad8-42e9-8944-17130da7958c)
 
-
-
-
-Te invitamos a realizar una actividad práctica para demostrar tus habilidades en React.js. La actividad consiste en crear una landing page básica para un negocio gastronómico, debe contar con las siguientes características:  
-
-Estructura de la Página:  
-    1 Una barra de navegación (navbar) en la parte superior.
-    2 Tres secciones:
-        - Sección de bienvenida.
-        - Sección de catálogo y productos.
-        - Sección de contacto.
-    3 Un pie de página (footer) en la parte inferior.
-Requerimientos Específicos: 
-    1 La landing page debe tener ruteo entre las secciones utilizando React Router.
-    2 La sección del catálogo de productos debe mostrar una lista de productos. Puedes usar cualquier base de datos o datos simulados (mock data) para poblar el catálogo.
-    3 La barra de navegación debe permitir navegar entre las secciones.
-    4 La página debe ser responsive y tener un diseño atractivo.
-
-Entrega del proyecto:
-
-Sube tu proyecto a un repositorio público en GitHub.
-Asegúrate de incluir un archivo README.md con instrucciones claras sobre cómo ejecutar el proyecto.
-Una vez completado, envíanos el enlace a tu repositorio para que podamos revisar tu trabajo.
-Queremos que esta prueba técnica sea una experiencia enriquecedora para ti. No solo nos ayudará a evaluar tus habilidades, sino que también te permitirá mostrar tu creatividad y dominio de React.js. ¡Buena suerte y esperamos ver tu talento reflejado en el proyecto!  
