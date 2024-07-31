@@ -46,6 +46,7 @@ const ProductDetail = () => {
       <section className={styles.hero_banner}>
         <h1>{product.name}</h1>
       </section>
+      
 
       {loading ?
         <h2>Cargando...</h2>
