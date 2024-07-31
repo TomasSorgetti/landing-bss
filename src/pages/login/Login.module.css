@@ -4,7 +4,7 @@
     background-size: cover;
     height: 100%;
     min-height: 80vh;
-    padding-top: 120px;
+    padding: 120px 0;
     display: flex;
     justify-content: center;
     align-items: center;
@@ -88,6 +88,18 @@
     cursor: pointer;
 }
 
+.button_cont button:hover {
+    background-color: #ffbd8e;
+    border: 2px solid #ffbd8e;
+}
+
+.button_cont button:focus {
+    background-color: #e56a12;
+    border: 2px solid #e56a12;
+    color: white;
+
+}
+
 .error_cont {
     height: 40px;
     width: 100%;
@@ -97,4 +109,30 @@
 
 .error_cont span {
     color: red;
+}
+
+@media screen and (max-width: 1440px) {
+    .login_cont form {
+        width: 460px;
+        padding: 40px 50px;
+        margin-top: 40px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .login_cont form h1 {
+        font-size: 1.5rem;
+    }
+
+    .error_cont {
+        height: 24px;
+    }
+
+    .login_cont form {
+        padding: 40px;
+    }
+
+    .button_cont {
+        margin-top: 20px;
+    }
 }
