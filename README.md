@@ -44,21 +44,27 @@ app/
 │   │   
 │   ├── components/                     # Carpeta que contiene todos los componentes
 │   │   ├── best_sellers/                   => Class Component
+│   │   ├── button/                         => Function Component
 │   │   ├── cart/                           => Function Component
 │   │   ├── cart_item/                      => Function Component
+│   │   ├── category/                       => Function Component
 │   │   ├── footer/                         => Function Component
 │   │   ├── navbar/                         => Function Component
 │   │   ├── product_card/                   => Function Component
-│   │   └── products_cards/                 => Function Component
+│   │   ├── products_cards/                 => Function Component
+│   │   └── suscribe_form/                  => Function Component
 │   │   
-│   ├── context/                        # Providers useContext de user y cart
+│   ├── helpers/  
+│   │   ├── contact.validate.js         # Funcion para validación del formulario
+│   │   └── scrollToTop.jsx             
+│   │   
+│   ├── hooks/                          # Providers useContext y useParams para componente de clase
+│   │   ├── params/                         => Function Component
 │   │   ├── cart/                           => Function Component
-│   │   └── user/                           => Class Component
-│   │   
-│   ├── helpers/                 
-│   │   └── contact.validate.js         # Funcion para validación del formulario
+│   │   └── user/                           => Function Component
 │   │   
 │   ├── pages/                          # Carpeta que contiene todas las páginas
+│   │   ├── categories/                     => Class Component
 │   │   ├── contact/                        => Class Component
 │   │   ├── error/                          => Function Component
 │   │   ├── home/                           => Function Component
@@ -69,6 +75,7 @@ app/
 │   ├── services/                       # Carpeta para simular los llamados a la api
 │   │   └── categories/                 # Mock y servicios de categorías
 │   │   └── contact/                    # Mock y servicios del from de contacto
+│   │   └── newsletter/                 # servicios del from de suscripción
 │   │   └── products/                   # Mock y servicios de productos
 │   │   └── users/                      # Mock y servicios de usuarios y simulacro de auth
 │   │   
@@ -79,25 +86,22 @@ app/
 ├── config files                
 └── README.md  
 ```
-Moka Coffe, un rincón de
-tranquilidad y sabor en
-cada taza
+
 
 ## Detalles a tener en cuenta sobre la app:
 ### Formularios
 - El formulario de Login utiliza un user mock para simular la conección con la db, y muestra un msg si el usuario no existe o la contraseña es incorrecta
+- Para loguearte puedes utilizar un usuario dentro de los mocks en: src/services/users/user.mock.js
+- El login se mantiene con un useContext, por lo que al recargar la página se pierde el logueo
 - El formulario de contacto cuenta validaciones simples, muestra un mensaje si hay un campo incorrecto y al modificarlo, desaparece ese mensaje. Al simularse el envio de mail muestra un Toast con un mensaje exitoso.
+- Los tres formularios en el sitio, cuando esta simulando el envio, el contenido del botón cambia a un estado de carga
 
-### Algo mas
-- En la Home, renderiza los 3 productos más destacados.
-- En la sección de productos tiene un filtrado por categoría, que funciona en conjunto a una searchbar, 
-aunque es una simulación.
+### Carrito de compra
+- Si clickeas fuera del carrito, en cualquier parte del sitio, menos en los botones de compra o de aumentar la cantidad, se minimiza.
 - Luego de agregar un producto al carrito se habilita la compra, una vez clickeado el
 botón de comprar, te dirije al login si es que no estás logueado, en caso contrario, muestra
-una alerta, aunque debería de dirigirte al checkout.
-- Para loguearte puedes utilizar un usuario dentro de los mocks en: src/services/users/user.mock.js
-- 
-
+una alerta que debería de dirigirte al checkout.
+- Una vez agregado un producto al carrito, se puede aumentar o disminuir la cantidad de ese mismo producto, o eliminar
 
 ## Cosas a tener en cuenta sobre el proyecto:
 - Se utilizaron mocks para simular la conección con el backend
