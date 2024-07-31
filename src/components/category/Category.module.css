@@ -28,3 +28,18 @@
         height: 280px;
     }
 }
+
+@media screen and (max-width: 768px) {
+    .category {
+        width: 400px;
+        height: 400px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .category {
+        width: 360px;
+        height: 360px;
+        margin-bottom: 0;
+    }
+}

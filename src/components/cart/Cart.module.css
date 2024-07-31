@@ -84,7 +84,7 @@
     font-weight: 600;
 }
 
-.cart.hide .closeCart {
+.closeCart {
     visibility: hidden;
     opacity: 0;
 }

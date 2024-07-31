@@ -42,3 +42,9 @@
         margin-bottom: 100px;
     }
 }
+
+@media screen and (max-width: 360px) {
+    .best_sellers_cont h2 {
+        font-size: 2rem;
+    }
+}

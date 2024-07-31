@@ -19,7 +19,7 @@ export const signIn = (email, password) => {
     if (!user) { 
         return new Promise((resolve) => {
             setTimeout(() => { 
-            resolve({ error: true, status: 404, message: "Usiario no encontrado" })
+            resolve({ error: true, status: 404, message: "Usuario no encontrado" })
         }, 500)
     })
     }

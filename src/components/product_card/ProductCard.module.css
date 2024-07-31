@@ -152,3 +152,12 @@
     }
 
 }
+
+@media screen and (max-width: 360px) {
+
+    .product_card,
+    .product_card img {
+        width: 336px;
+        height: 336px;
+    }
+}

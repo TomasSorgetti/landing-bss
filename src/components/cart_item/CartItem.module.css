@@ -3,6 +3,7 @@
     align-items: center;
     gap: 1rem;
     margin-bottom: 1rem;
+    position: relative;
 }
 
 .cart_item img {
@@ -33,4 +34,15 @@
     font-size: 1.5rem;
     height: 100%;
     width: 26px;
+}
+
+.remove_button {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: transparent;
+    border: none;
+    color: #140F0B;
+    cursor: pointer;
+    font-size: 1.5rem;
 }

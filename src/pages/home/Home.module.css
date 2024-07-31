@@ -226,7 +226,7 @@
 
     .cafe_vendidos_cont div h2 {
         font-size: 2rem;
-        
+
     }
 
     .cafe_vendidos_cont div span {
@@ -285,6 +285,11 @@
         align-items: center;
     }
 
+    .categories ul li a {
+        width: 400px;
+        height: 400px;
+    }
+
     .cafe_vendidos_cont {
         flex-direction: column;
     }
@@ -317,5 +322,36 @@
 @media screen and (max-width: 640px) {
     .hero_banner_cont div {
         max-width: 560px;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .hero_banner_cont div .hero_text_span {
+        font-size: 0.8rem;
+    }
+
+    .hero_banner_cont div h1 {
+        font-size: 1.8rem;
+    }
+
+    .hero_banner_cont div {
+        padding: 0 24px;
+    }
+
+    .categories ul {
+        gap: 20px;
+    }
+
+    .categories ul li a {
+        width: 360px;
+        height: 360px;
+    }
+
+    .cafe_vendidos_cont div {
+        padding: 40px 24px;
+    }
+
+    .newsletter_cont {
+        padding: 24px;
     }
 }

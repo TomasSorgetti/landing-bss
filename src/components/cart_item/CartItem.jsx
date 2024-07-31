@@ -18,7 +18,7 @@ const CartItem = ({ data }) => {
                     <button onClick={() => addToCart(data.id)}>+</button>
                 </div>
 
-                <button className={styles.remove_button} onClick={() => deleteFromCart(data.id)}>Eliminar</button>
+                <button className={styles.remove_button} onClick={() => deleteFromCart(data.id)}>X</button>
             </div>
 
         </li>

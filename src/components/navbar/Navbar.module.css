@@ -229,4 +229,16 @@
     }
 }
 
-@media screen and (max-width: 360px) {}
+@media screen and (max-width: 360px) {
+    .navbar_wrapper {
+        padding: 24px;
+    }
+
+    .logo {
+        font-size: 1.5rem;
+    }
+
+    .mobile_cart .cart_icon {
+        font-size: 2rem;
+    }
+}

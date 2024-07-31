@@ -44,7 +44,7 @@ class Home extends Component {
             <main>
                 <section className={styles.hero_banner_cont}>
                     <div>
-                        <span className={styles.hero_text_span}>Café y repostería</span>
+                        <span className={styles.hero_text_span}>Café y patisserie</span>
                         <h1>Moka <span className={styles.hero_title_span}>Coffe</span>, un rincón de <br /> tranquilidad y sabor en <br /> cada taza</h1>
                         <Button label="comprar" url="/categorias" />
                     </div>
@@ -54,7 +54,7 @@ class Home extends Component {
 
                 <section className={styles.cafe_vendidos_cont}>
                     <div>
-                        <span>Café y repostería</span>
+                        <span>Café y patisserie</span>
                         <h2>Los cafés más vendidos</h2>
                         <p>Prueba nuestros cafés más populares,
                             elegidos por su sabor único y calidad.
@@ -76,7 +76,7 @@ class Home extends Component {
                 <section className={styles.cafe_vendidos_cont}>
                     <img src={cafe_galleta} alt="Café con una galleta" />
                     <div>
-                        <span>Café y repostería</span>
+                        <span>Café y patisserie</span>
                         <h2>Sabor y Dulzura</h2>
                         <p>Combina nuestro café con una tentadora
                             pastelería. La mezcla perfecta para un
