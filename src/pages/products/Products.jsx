@@ -71,8 +71,7 @@ class ProductsWithoutParams extends Component {
             <main className={styles.products_cont}>
                 <section className={styles.hero_banner}>
                     <div className={styles.wrapper}>
-                        <h1>Descubrí lo Mejor de los productos Moka
-                            <span>Coffee</span></h1>
+                        <h1>Descubrí lo Mejor de los productos Moka <span>Coffee</span></h1>
                         <p>Explorá nuestra selección de bebidas y postres, pensados para ofrecerte una experiencia de sabor única.</p>
                     </div>
                 </section>
