@@ -32,7 +32,7 @@ function App() {
         <Route path="/producto/:id" element={<ProductDetail />} />
         <Route path="/contacto" element={<Contact />} />
         <Route path="/login" element={<Login />} />
-        <Route path="/*" element={<Error />} />
+        <Route path="*" element={<Error />} />
       </Routes>
       {
         !isVisible &&

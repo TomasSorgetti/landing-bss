@@ -13,6 +13,8 @@ footer {
     font-size: 2.5rem;
     text-decoration: none;
     color: white;
+    width: 100%;
+    text-align: left;
 }
 
 .logo span {
@@ -35,7 +37,6 @@ footer {
     display: flex;
     justify-content: space-between;
     width: 100%;
-    margin-left: 500px;
 }
 
 .nav_links a {
@@ -69,10 +70,6 @@ footer {
 @media screen and (max-width: 1440px) {
     .footer_wrapper {
         max-width: 1180px;
-    }
-
-    .info_container {
-        margin-left: 400px;
     }
 }
 
