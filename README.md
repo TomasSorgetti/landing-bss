@@ -1,6 +1,6 @@
 # Desafío técnico React para Boost Software Studio
 
-## Deploy: [Proyecto react shop]("landing-bss.vercel.app/")
+## Deploy: [Proyecto React Coffe Shop]("https://landing-bss.vercel.app/")
 
 
 ## Como Iniciar
