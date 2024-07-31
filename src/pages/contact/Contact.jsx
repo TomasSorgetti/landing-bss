@@ -96,7 +96,11 @@ class Contact extends Component {
                 <div className={styles.wrapper}>
                     <section className={styles.contact_info}>
                         <h1>Contactanos</h1>
-                        <p>Lorem ipsum dolor sit amet consectetur, adipisicing elit. Nemo ea ducimus pariatur dolore nihil tempora culpa blanditiis magni. Quaerat facilis dolor ipsam quos veritatis quod numquam non cumque eum illo.</p>
+                        <h2>Estamos para <span>Ayudarte</span></h2>
+                        <p>Si tenés consultas o necesitás más información, no
+                            dudes en contactarnos. Nuestro equipo está
+                            disponible para responder a todas tus preguntas
+                            y asistirte en lo que necesites.</p>
                     </section>
                     <form onSubmit={this.handleSubmit} className={styles.contact_form}>
                         <ul>
