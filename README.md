@@ -152,6 +152,11 @@ ser una url de la localización del archivo en el servidor.
 ### Login Page
 ![login_page](https://github.com/user-attachments/assets/59862e66-8b8c-4c0f-b2f0-34fdfd6c23e0)
 
+### Product Detail Page
+![detalle_producto](https://github.com/user-attachments/assets/bbee7dae-edfe-4ede-91d3-35f99bcdd68d)
+
+
+
 
 
 Te invitamos a realizar una actividad práctica para demostrar tus habilidades en React.js. La actividad consiste en crear una landing page básica para un negocio gastronómico, debe contar con las siguientes características:  
