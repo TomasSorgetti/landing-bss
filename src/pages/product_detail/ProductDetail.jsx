@@ -44,7 +44,7 @@ const ProductDetail = () => {
   return (
     <main className={styles.product_detail}>
       <section className={styles.hero_banner}>
-        <h1>Detalles del producto</h1>
+        <h1>{product.name}</h1>
       </section>
 
       {loading ?

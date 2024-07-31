@@ -1,13 +1,14 @@
 import bebidas from "../../assets/images/categories/bebidas.png"
 import dulces from "../../assets/images/categories/dulces.png"
 import postres from "../../assets/images/categories/postres.png"
+import all from "../../assets/images/categories/todos_category.png"
 
 export const categories = [
     {
         id: 1,
         name: "Todos",
         image:{
-            url:bebidas,
+            url:all,
             alt:"categoría de prueba",
         }
     },

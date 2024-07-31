@@ -9,7 +9,7 @@ const ProductCard = ({ id, name, price, description, isBestSeller, image }) => {
         addToCart(id)
         handleOpenCart()
     }
-
+    const newParagraf = description.slice(0, 30)
     return (
         <li className={styles.product_card}>
             <img
@@ -20,7 +20,7 @@ const ProductCard = ({ id, name, price, description, isBestSeller, image }) => {
                 <p>${price}</p>
             </div>
             <div className={styles.product_info_slide}>
-                <p>{description}</p>
+                <p>{newParagraf}...</p>
                 <div>
                     <Link className={styles.ver_button} to={`/producto/${id}`}>Ver</Link>
                     <button onClick={handleClick} className={`${styles.buy_button} cancelClose`}>Comprar</button>
