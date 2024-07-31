@@ -78,7 +78,7 @@
     border: none;
     font-size: 2rem;
     position: fixed;
-    top: 40px;
+    bottom: 40px;
     right: 56px;
     cursor: pointer;
     font-weight: 600;
@@ -108,8 +108,7 @@
 
     .cart ul {
         display: flex;
-        flex-direction: row;
-        flex-wrap: wrap;
+        flex-direction: column;
         justify-content: start;
         align-items: start;
         gap: 20px;
@@ -118,5 +117,29 @@
     .cart.show .closeCart {
         visibility: visible;
         opacity: 1;
+    }
+}
+
+@media screen and (max-width: 360px) {
+    .cart {
+        padding: 12px 24px;
+    }
+
+    .closeCart {
+        bottom: 40px;
+        right: 40px;
+    }
+
+    .cart_title {
+        font-size: 1.8rem;
+    }
+
+    .cart ul {
+        padding-top: 40px;
+        height: 75%;
+    }
+
+    .cart_footer_text {
+        align-items: start;
     }
 }

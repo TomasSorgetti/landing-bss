@@ -3,7 +3,7 @@ import styles from "./Product.module.css"
 import { useContext, useEffect, useState } from "react"
 import { getProductById } from "../../services/products/product.service"
 import { cartContext } from "../../hooks/cart/CartContext"
-
+import { MdKeyboardBackspace } from "react-icons/md";
 
 
 const ProductDetail = () => {
@@ -46,7 +46,13 @@ const ProductDetail = () => {
       <section className={styles.hero_banner}>
         <h1>{product.name}</h1>
       </section>
-      
+      <div className={styles.goBack_wrapper}>
+        <div onClick={() => window.history.back()} className={styles.back_button}>
+          <MdKeyboardBackspace className={styles.icon} />
+          <span>Volver</span>
+        </div>
+      </div>
+
 
       {loading ?
         <h2>Cargando...</h2>
@@ -68,6 +74,9 @@ const ProductDetail = () => {
 
           </article>
         )
+      }
+      {
+        !loading && !product.name && <h2>No se encontro el producto</h2>
       }
     </main>
   )

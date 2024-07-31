@@ -28,6 +28,9 @@ export const getProductById = (id) => {
     return new Promise ((resolve)=> {
         setTimeout(() => {
             const product = products.filter((prod) => prod.id === id)[0]
+            if (!product) {
+                resolve({error: true, status: 404, message: "Product not found"})
+            }
             resolve(product)
         }, 600);
     })
