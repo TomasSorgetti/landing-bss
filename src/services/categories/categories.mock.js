@@ -6,7 +6,7 @@ import all from "../../assets/images/categories/todos_category.png"
 export const categories = [
     {
         id: 1,
-        name: "Todos",
+        name: "todos",
         image:{
             url:all,
             alt:"categoría de prueba",
@@ -14,7 +14,7 @@ export const categories = [
     },
     {
         id: 2,
-        name: "Bebidas",
+        name: "bebidas",
         image:{
             url:bebidas,
             alt:"categoría de prueba",
@@ -22,7 +22,7 @@ export const categories = [
     },
     {
         id: 3,
-        name: "Dulces",
+        name: "dulces",
         image:{
             url:dulces,
             alt:"categoría de prueba",
@@ -30,7 +30,7 @@ export const categories = [
     },
     {
         id: 4,
-        name: "Postres",
+        name: "postres",
         image:{
             url:postres,
             alt:"categoría de prueba",

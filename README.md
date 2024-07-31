@@ -84,11 +84,14 @@ tranquilidad y sabor en
 cada taza
 
 ## Detalles a tener en cuenta sobre la app:
+### Formularios
+- El formulario de Login utiliza un user mock para simular la conección con la db, y muestra un msg si el usuario no existe o la contraseña es incorrecta
+- El formulario de contacto cuenta validaciones simples, muestra un mensaje si hay un campo incorrecto y al modificarlo, desaparece ese mensaje. Al simularse el envio de mail muestra un Toast con un mensaje exitoso.
+
+### Algo mas
 - En la Home, renderiza los 3 productos más destacados.
 - En la sección de productos tiene un filtrado por categoría, que funciona en conjunto a una searchbar, 
 aunque es una simulación.
-- El formulario simula un envio a un backend que devuelve una respuesta, pero no envía a ningun lado la data.
-- 
 - Luego de agregar un producto al carrito se habilita la compra, una vez clickeado el
 botón de comprar, te dirije al login si es que no estás logueado, en caso contrario, muestra
 una alerta, aunque debería de dirigirte al checkout.

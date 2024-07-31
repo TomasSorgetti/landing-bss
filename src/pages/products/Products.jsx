@@ -20,9 +20,9 @@ class ProductsWithoutParams extends Component {
             loading: true
         })
         try {
-            if (this.props.params.categoryId) {
+            if (this.props.params.category) {
                 const getData = async () => {
-                    const productsList = await getAllProductsByCategory(Number(this.props.params.categoryId))
+                    const productsList = await getAllProductsByCategory(this.props.params.category)
                     const categoriesList = await getAllCategories()
                     this.setState({
                         products: productsList,
@@ -41,14 +41,14 @@ class ProductsWithoutParams extends Component {
     }
 
     componentDidUpdate(prevProps) {
-        if (prevProps.params.categoryId !== this.props.params.categoryId) {
+        if (prevProps.params.category !== this.props.params.category) {
             this.setState({
                 loading: true
             })
             try {
-                if (this.props.params.categoryId) {
+                if (this.props.params.category) {
                     const getData = async () => {
-                        const productsList = await getAllProductsByCategory(Number(this.props.params.categoryId))
+                        const productsList = await getAllProductsByCategory(this.props.params.category)
                         this.setState({
                             products: productsList,
                             loading: false,
@@ -83,7 +83,7 @@ class ProductsWithoutParams extends Component {
                         <ul>
                             {this.state.categories?.map(({ name, id }) => (
                                 <li key={id}>
-                                    <Link className={(id == this.props.params.categoryId) ? styles.active_option : ""} to={`/categorias/${id}`}>{name}</Link>
+                                    <Link className={(name == this.props.params.category) ? styles.active_option : ""} to={`/categorias/${name}`}>{name}</Link>
                                 </li>
                             ))}
                         </ul>
