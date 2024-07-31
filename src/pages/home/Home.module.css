@@ -326,6 +326,10 @@
 }
 
 @media screen and (max-width: 360px) {
+    .hero_banner_cont {
+        height: 500px;
+    }
+
     .hero_banner_cont div .hero_text_span {
         font-size: 0.8rem;
     }
