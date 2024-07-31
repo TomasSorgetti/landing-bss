@@ -137,8 +137,14 @@ ser una url de la localización del archivo en el servidor.
 
 ## Diseño
 
-
+### Home Page
 ![home_page](https://github.com/user-attachments/assets/bfdb8cf8-7ffa-4ef1-b530-be4e0451cd26)
+
+### Categories Page
+![categorias_page](https://github.com/user-attachments/assets/c4d6b5c6-eb5e-4384-b079-2f6a2e15688b)
+
+### Products Page
+![productos_page](https://github.com/user-attachments/assets/899f7c63-7016-4b2e-9461-6c1045c728be)
 
 
 
