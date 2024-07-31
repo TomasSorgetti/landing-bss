@@ -57,11 +57,11 @@ const Login = () => {
                 <ul>
                     <li className={styles.input_cont}>
                         <label htmlFor="email">Email:</label>
-                        <input type="email" name="email" id="email" value={form.email} onChange={handleChange} />
+                        <input type="email" name="email" id="email" value={form.email} onChange={handleChange} placeholder="Ej: juanperez@gmail.com" />
                     </li>
                     <li className={styles.input_cont}>
                         <label htmlFor="password">Contraseña:</label>
-                        <input type="password" name="password" id="password" value={form.password} onChange={handleChange} />
+                        <input type="password" name="password" id="password" value={form.password} onChange={handleChange} placeholder="*******" />
                     </li>
                     <li className={styles.remember_cont}>
                         <input type="checkbox" name="rememberme" id="rememberme" />
